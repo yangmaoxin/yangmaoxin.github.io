@@ -24,6 +24,26 @@
 
     
   <url>
+    <loc>http://igeek.wang/2015/12/22/html/</loc>
+    <lastmod>2017-09-05T15:59:35.000Z</lastmod>
+    <data>
+        <display>
+        <title>HTML笔记</title>
+        <pubTime>2015-12-22T02:04:56.000Z</pubTime>
+        
+        <tag>前端微专业笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习笔记" url="http://igeek.wang/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://igeek.wang/2015/12/22/photoshop/</loc>
     <lastmod>2017-09-05T15:59:35.000Z</lastmod>
     <data>
@@ -50,26 +70,6 @@
         <display>
         <title>Hexo+Github，搭建属于自己的博客</title>
         <pubTime>2016-01-25T04:14:06.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程" url="http://igeek.wang/categories/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://igeek.wang/2016/01/26/hexo-github-gitcafe/</loc>
-    <lastmod>2017-09-05T15:59:35.000Z</lastmod>
-    <data>
-        <display>
-        <title>把Hexo同时部署到GitHub和GitCafe</title>
-        <pubTime>2016-01-26T02:41:48.000Z</pubTime>
         
         <tag>hexo</tag>
          
@@ -144,19 +144,19 @@
 
     
   <url>
-    <loc>http://igeek.wang/2015/12/22/html/</loc>
+    <loc>http://igeek.wang/2016/01/26/hexo-github-gitcafe/</loc>
     <lastmod>2017-09-05T15:59:35.000Z</lastmod>
     <data>
         <display>
-        <title>HTML笔记</title>
-        <pubTime>2015-12-22T02:04:56.000Z</pubTime>
+        <title>把Hexo同时部署到GitHub和GitCafe</title>
+        <pubTime>2016-01-26T02:41:48.000Z</pubTime>
         
-        <tag>前端微专业笔记</tag>
+        <tag>hexo</tag>
          
          
            
              
-              <breadCrumb title="学习笔记" url="http://igeek.wang/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+              <breadCrumb title="教程" url="http://igeek.wang/categories/%E6%95%99%E7%A8%8B/"/>
           
         </display>
     </data>
