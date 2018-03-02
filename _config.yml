@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: y1m7x's Blog
+title: Moxinn's Blog
 subtitle: 一个前端菜鸟的成长笔记
 description: 人总需要点什么来坚持下去。或是希望，或是信仰。我和这个世界不熟，但我怀有期待。
-author: y1m7x
+author: Moxinn
 language: zh-CN
 timezone:
 avatar: http://7xp8kh.com1.z0.glb.clouddn.com/touxiang14257483.jpg
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://igeek.wang
+url: http://moxinn.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
