@@ -15,7 +15,7 @@ script:
 after_script:
   - cd ./public
   - git init
-  - git config user.name "y1m7x"
+  - git config user.name "moxinn"
   - git config user.email "ymx017@gmail.com"
   - git add .
   - git commit -m "Build by Travis CI"
