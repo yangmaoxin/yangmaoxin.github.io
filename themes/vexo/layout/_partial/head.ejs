@@ -24,6 +24,13 @@
   <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
   <%- js(['js/qrious', 'js/gitment']) %>
   <%- partial('_third-party/mathjax') %>
+  <%if(theme.cnzz_analytics){%>
+	<div class="hide">
+    <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1262387845'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1262387845' type='text/javascript'%3E%3C/script%3E"));</script>
+		</script>
+	</div>
+<%}%>
 </head>
 <div class="wechat-share">
   <img src="/css/images/logo.png" />
