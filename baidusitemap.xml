@@ -4,135 +4,13 @@
 
     
     
-    
-  <url>
-    <loc>https://moxinn.com/2016/11/22/git/</loc>
-    <lastmod>2018-07-17T06:22:34.152Z</lastmod>
-    <data>
-        <display>
-        <title>Git命令速查表－好记性不如一张表</title>
-        <pubTime>2016-11-22T08:15:54.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-         
-           
-             
-              <breadCrumb title="学习笔记" url="https://moxinn.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://moxinn.com/2016/01/26/hexo-github-gitcafe/</loc>
-    <lastmod>2018-07-17T06:22:34.152Z</lastmod>
-    <data>
-        <display>
-        <title>把Hexo同时部署到GitHub和GitCafe</title>
-        <pubTime>2016-01-26T10:41:48.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程" url="https://moxinn.com/categories/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://moxinn.com/2016/02/27/layout/</loc>
-    <lastmod>2018-07-17T06:22:34.152Z</lastmod>
-    <data>
-        <display>
-        <title>多列布局方案整理</title>
-        <pubTime>2016-02-27T12:53:40.000Z</pubTime>
-        
-        <tag>前端微专业笔记</tag>
-         
-         
-           
-             
-              <breadCrumb title="学习笔记" url="https://moxinn.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://moxinn.com/2016/02/27/wynotes/</loc>
-    <lastmod>2018-07-17T06:22:34.152Z</lastmod>
-    <data>
-        <display>
-        <title>网易前端微专业------页面架构笔记</title>
-        <pubTime>2016-02-27T12:43:18.000Z</pubTime>
-        
-        <tag>前端微专业笔记</tag>
-         
-         
-           
-             
-              <breadCrumb title="学习笔记" url="https://moxinn.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://moxinn.com/2016/08/31/hexo-coding-github/</loc>
-    <lastmod>2018-07-17T06:22:34.152Z</lastmod>
-    <data>
-        <display>
-        <title>把Hexo同时部署到GitHub和Coding</title>
-        <pubTime>2016-08-31T20:15:54.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程" url="https://moxinn.com/categories/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://moxinn.com/2016/09/01/automatic-backup/</loc>
-    <lastmod>2018-07-17T06:22:34.152Z</lastmod>
-    <data>
-        <display>
-        <title>自动备份与恢复Hexo博客源文件</title>
-        <pubTime>2016-09-01T12:08:51.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程" url="https://moxinn.com/categories/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
   <url>
     <loc>https://moxinn.com/2018/07/17/vscode-backup/</loc>
-    <lastmod>2018-07-17T06:22:34.152Z</lastmod>
+    <lastmod>2018-07-17T06:57:21.054Z</lastmod>
     <data>
         <display>
-        <title>备份vscode的插件</title>
-        <pubTime>2018-07-17T11:01:39.000Z</pubTime>
+        <title>VSCode 配置备份与同步</title>
+        <pubTime>2018-07-17T03:01:39.000Z</pubTime>
         
         <tag>效率</tag>
          
@@ -148,13 +26,18 @@
     </url>
 
     
+    
+    
+    
+    
+    
   <url>
-    <loc>https://moxinn.com/2016/01/25/hexo-my-blog/</loc>
-    <lastmod>2018-07-17T06:22:34.152Z</lastmod>
+    <loc>https://moxinn.com/2016/09/01/automatic-backup/</loc>
+    <lastmod>2018-07-17T06:57:21.050Z</lastmod>
     <data>
         <display>
-        <title>Hexo+Github，搭建属于自己的博客</title>
-        <pubTime>2016-01-25T12:14:06.000Z</pubTime>
+        <title>自动备份与恢复Hexo博客源文件</title>
+        <pubTime>2016-09-01T04:08:51.000Z</pubTime>
         
         <tag>hexo</tag>
          
@@ -168,17 +51,13 @@
     </url>
 
     
-    
-    
-    
-    
   <url>
     <loc>https://moxinn.com/2015/12/22/photoshop/</loc>
-    <lastmod>2018-07-17T06:22:34.148Z</lastmod>
+    <lastmod>2018-07-17T06:57:21.050Z</lastmod>
     <data>
         <display>
         <title>Photoshop切图</title>
-        <pubTime>2015-12-22T10:01:46.000Z</pubTime>
+        <pubTime>2015-12-22T02:01:46.000Z</pubTime>
         
         <tag>前端微专业笔记</tag>
          
@@ -194,13 +73,134 @@
     
   <url>
     <loc>https://moxinn.com/2015/12/22/html/</loc>
-    <lastmod>2018-07-17T06:22:34.148Z</lastmod>
+    <lastmod>2018-07-17T06:57:21.050Z</lastmod>
     <data>
         <display>
         <title>HTML笔记</title>
-        <pubTime>2015-12-22T10:04:56.000Z</pubTime>
+        <pubTime>2015-12-22T02:04:56.000Z</pubTime>
         
         <tag>前端微专业笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习笔记" url="https://moxinn.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>https://moxinn.com/2016/01/25/hexo-my-blog/</loc>
+    <lastmod>2018-07-17T06:57:21.050Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo+Github，搭建属于自己的博客</title>
+        <pubTime>2016-01-25T04:14:06.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程" url="https://moxinn.com/categories/%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://moxinn.com/2016/01/26/hexo-github-gitcafe/</loc>
+    <lastmod>2018-07-17T06:57:21.050Z</lastmod>
+    <data>
+        <display>
+        <title>把Hexo同时部署到GitHub和GitCafe</title>
+        <pubTime>2016-01-26T02:41:48.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程" url="https://moxinn.com/categories/%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://moxinn.com/2016/02/27/layout/</loc>
+    <lastmod>2018-07-17T06:57:21.050Z</lastmod>
+    <data>
+        <display>
+        <title>多列布局方案整理</title>
+        <pubTime>2016-02-27T04:53:40.000Z</pubTime>
+        
+        <tag>前端微专业笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习笔记" url="https://moxinn.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://moxinn.com/2016/02/27/wynotes/</loc>
+    <lastmod>2018-07-17T06:57:21.050Z</lastmod>
+    <data>
+        <display>
+        <title>网易前端微专业------页面架构笔记</title>
+        <pubTime>2016-02-27T04:43:18.000Z</pubTime>
+        
+        <tag>前端微专业笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习笔记" url="https://moxinn.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://moxinn.com/2016/08/31/hexo-coding-github/</loc>
+    <lastmod>2018-07-17T06:57:21.050Z</lastmod>
+    <data>
+        <display>
+        <title>把Hexo同时部署到GitHub和Coding</title>
+        <pubTime>2016-08-31T12:15:54.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程" url="https://moxinn.com/categories/%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://moxinn.com/2016/11/22/git/</loc>
+    <lastmod>2018-07-17T06:57:21.050Z</lastmod>
+    <data>
+        <display>
+        <title>Git命令速查表－好记性不如一张表</title>
+        <pubTime>2016-11-22T00:15:54.000Z</pubTime>
+        
+        <tag>git</tag>
          
          
            
