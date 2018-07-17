@@ -39,6 +39,9 @@ p {
 pre {
   overflow-x: auto;
 }
+.hide {
+  display: none !important;
+}
 .flex-box {
   display: flex;
   display: -ms-flexbox;
