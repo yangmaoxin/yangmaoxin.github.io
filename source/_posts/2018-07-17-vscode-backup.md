@@ -1,8 +1,10 @@
-title: 备份vscode的插件
+title: VSCode 配置备份与同步
 date: 2018-07-17 11:01:39
 categories: 学习笔记
 tags: [效率,备份]
 ---
+<blockquote class="blockquote-center">一个非常有用的 VSCode 插件Settings Sync，备份和同步 VSCode 的设置，操作系统和多端同步不用再折腾 VSCode 配置。</blockquote>
+<!--more-->
 ## 安装插件
 
 在扩展商店中搜索并安装插件 **setting sync** 
