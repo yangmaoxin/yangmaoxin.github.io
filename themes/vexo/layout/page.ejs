@@ -57,6 +57,12 @@
       <div id="uyan_frame"></div>
       <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js"></script>
       <!-- UY END -->
+      <% } else if (theme.comment === 'valine') { %>
+      <!-- Valine START -->
+      <div id="comments_valine"></div>
+      <script type="text/javascript" src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+      <script type="text/javascript" src='//unpkg.com/valine/dist/Valine.min.js'></script>
+      <!-- Valine END -->
     <% } else { %>
       <!-- No Comment -->
     <% } %>
@@ -149,5 +155,29 @@
       })
       gitment.render(document.getElementById('comments'))
     }
+
+    // valine
+    var valineConfig = "<%= theme.valine.appId %>";
+    console.log('valineConfig',valineConfig);
+    if (valineConfig !== 'undefined') {
+      new Valine({
+        av: AV,
+        el: '#comments_valine',
+        appId: '<%= theme.valine.appId %>',
+        appKey: '<%= theme.valine.appKey %>',
+        placeholder: '<%= theme.valine.placeholder %>',
+        notify: <%= theme.valine.notify %>,
+        verify: <%= theme.valine.verify %>,
+        avatar: '<%= theme.valine.avatar %>',
+        meta: '<%= theme.valine.meta %>'.split(','),
+        pageSize: '<%= theme.valine.pageSize %>',
+        path: window.location.pathname,
+        lang: '<%= config.language %>'.toLowerCase()
+    })
+    }
+
+
+
+
   })();
 </script>
