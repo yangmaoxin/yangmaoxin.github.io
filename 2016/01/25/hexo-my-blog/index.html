@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="人总需要点什么来坚持下去。或是希望，或是信仰。我和这个世界不熟，但我怀有期待。">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      Hexo+Github，搭建属于自己的博客 | Moxinn&#39;s Blog
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="/js/qrious.js"></script>
+<script src="/js/gitment.js"></script>
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Moxinn's Blog</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>Hexo+Github，搭建属于自己的博客</h2>
+  <p class="post-date">2016-01-25</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="什么是GitHub-Pages"><a href="#什么是GitHub-Pages" class="headerlink" title="什么是GitHub Pages"></a>什么是GitHub Pages</h3><p>本是用于介绍托管在 GitHub 的项目，现很流行用来搭建博客，有300M免费空间。</p>
+<h3 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo"></a>什么是Hexo</h3><blockquote>
+<p>快速、简单且功能强大的 Node.js 博客框架。 A fast, simple &amp; powerful blog<br>framework,powered by Node.js.</p>
+</blockquote>
+<p>类似于jekyll、Octopress、Wordpress，我们可以用hexo创建自己的博客，托管到github或Heroku上，绑定自己的域名，用markdown写文章。<br>本博客就是使用hexo创建并托管在github上。</p>
+<h3 id="为什么要用hexo"><a href="#为什么要用hexo" class="headerlink" title="为什么要用hexo?"></a>为什么要用hexo?</h3><blockquote>
+<p>不可思议的快速 ─ 只要一眨眼静态文件即生成完成<br>支持 Markdown<br>仅需一道指令即可部署到 GitHub Pages 和 Heroku<br>已移植 Octopress 插件<br>高扩展性、自订性<br>兼容于 Windows, Mac &amp; Linux</p>
+</blockquote>
+<p>以上是引用作者的话。</p>
+<p>对我而言，一个界面简洁，可以使用markdown写作，前期搭建的感觉很有B格。<br>所以记录一下搭建的过程以便之后回来方便查看。<br><a id="more"></a></p>
+<h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><h3 id="安装Node"><a href="#安装Node" class="headerlink" title="安装Node"></a>安装Node</h3><p>作用：用来生成静态页面的。<br>到Node.js官网下载相应平台的最新版本，一路安装即可。</p>
+<h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>作用：把本地的hexo内容提交到github上去.</p>
+<p>msysgit是Windows版的Git，从<a href="https://git-for-windows.github.io" target="_blank" rel="external">这里</a>下载，然后按默认选项安装即可。具体查看<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">廖雪峰Git教程</a></p>
+<h3 id="申请GitHub"><a href="#申请GitHub" class="headerlink" title="申请GitHub"></a>申请GitHub</h3><p>作用：是用来做博客的远程创库、域名、服务器之类的。</p>
+<p>github账号直接申请就行，跟一般的注册账号差不多，SSH Keys，可以不配制，不配置的话以后每次对自己的博客有改动提交的时候需要手动输入账号密码，配置后不需要密码，网上有很多教程。</p>
+<h3 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h3><p>使用hexo博客必须配置SSH。<br>打开git bash，输入<code>cd ~/.ssh</code>，如果果提示：No such file or directory 说明未配置SSH。</p>
+<ul>
+<li>本地生成密钥对<br><code>ssh-keygen -t rsa -C &quot;你的邮件地址&quot;</code>，注意命令中的大小写不要搞混。按提示指定保存文件夹，不设置密码。</li>
+<li>添加公钥到Github<ol>
+<li>根据上一步的提示，找到公钥文件（默认为id_rsa.pub），用记事本打开，全选并复制。</li>
+<li>登录Github，右上角 头像 -&gt; <code>Settings</code> —&gt; <code>SSH keys</code> —&gt; <code>Add SSH</code> key。把公钥粘贴到key中，填好title并点击 <code>Add key</code>。</li>
+<li>git bash中输入命令<code>ssh -T git@github.com</code>，选yes，等待片刻可看到成功提示。</li>
+</ol>
+</li>
+<li>修改本地的ssh remote url，不用https协议，改用git协议<ol>
+<li>Github仓库中获取ssh协议相应的url</li>
+<li>本地仓库执行命令<code>git remote set-url origin SSH</code>对应的url，配置完后可用<code>git remote -v</code>查看结果</li>
+</ol>
+</li>
+</ul>
+<p>这样<code>git push</code>或<code>hexo d</code>时不再需要输入账号密码。</p>
+<h2 id="hexo安装和使用"><a href="#hexo安装和使用" class="headerlink" title="hexo安装和使用"></a>hexo安装和使用</h2><p>以下命令行需要在Git终端中执行。</p>
+<ul>
+<li>创建一个新文件夹作为hexo的安装目录，这样hexo文件都在里面，主要是为了方便管理。</li>
+<li>在这个文件夹内，右键打开git bash(这里是以windows系统为例。)。注意：最好使用管理员身份打开。</li>
+<li><p>安装hexo</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">npm</span> install -g hexo <span class="comment">#可用hexo -v查看版本。这里我用的是3.1.1。 </span></div><div class="line"><span class="built_in">npm</span> update hexo -g <span class="comment">#升级</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>布置hexo</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo</span> init <span class="comment">#初始化</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>hexo 会在目标文件夹建立网站所需要的所有文件。</p>
+<ul>
+<li>安装依赖包：npm install</li>
+<li>创建Github Repository：Repository名字必须是你的Github名.github.io，比如我是yangmaoxin.github.io</li>
+<li>部署：打开博客根目录下的_config.yml文件，末尾添加如下信息。<figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">deploy:</span></div><div class="line"><span class="symbol">  type:</span> git</div><div class="line"><span class="symbol">  repository:</span> 上一步的Github仓库地址，项目主页点SSH再复制URL</div><div class="line"><span class="symbol">  branch:</span> master</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>然后执行命令：<br><figure class="highlight verilog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo <span class="keyword">generate</span> # 生成静态页面，可以简化为hexo g</div><div class="line">hexo deploy # 部署到Github，可以简化为hexo d</div></pre></td></tr></table></figure></p>
+<p>浏览器访问yangmaoxin.github.io就能看到自己的Blog了，一般延迟十分钟左右才能看到效果。一开始看到404页面不要惊慌，耐心等等。</p>
+<h2 id="hexo常用命令"><a href="#hexo常用命令" class="headerlink" title="hexo常用命令"></a>hexo常用命令</h2><h3 id="简写"><a href="#简写" class="headerlink" title="简写"></a>简写</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">hexo n <span class="string">"我的博客"</span> == hexo new <span class="string">"我的博客"</span> #新建文章</div><div class="line">hexo p == hexo publish</div><div class="line">hexo g == hexo generate#生成</div><div class="line">hexo s == hexo<span class="built_in"> server </span>#启动服务预览</div><div class="line">hexo d == hexo deploy#部署</div></pre></td></tr></table></figure>
+<h3 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">hexo<span class="built_in"> server </span>#Hexo 会监视文件变动并自动更新，您无须重启服务器。</div><div class="line">hexo<span class="built_in"> server </span>-s #静态模式</div><div class="line">hexo<span class="built_in"> server </span>-p 5000 #更改端口</div><div class="line">hexo<span class="built_in"> server </span>-i 192.168.1.1 #自定义 IP</div><div class="line"></div><div class="line">hexo clean #清除缓存 网页正常情况下可以忽略此条命令</div><div class="line">hexo g #生成静态网页</div><div class="line">hexo d #开始部署</div></pre></td></tr></table></figure>
+<h3 id="监视文件变动"><a href="#监视文件变动" class="headerlink" title="监视文件变动"></a>监视文件变动</h3><figure class="highlight verilog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo <span class="keyword">generate</span> #使用 Hexo 生成静态文件快速而且简单</div><div class="line">hexo <span class="keyword">generate</span> --watch #监视文件变动</div></pre></td></tr></table></figure>
+<h3 id="完成后部署"><a href="#完成后部署" class="headerlink" title="完成后部署"></a>完成后部署</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#以下两个命令的作用是相同的</span></div><div class="line">hexo generate --deploy</div><div class="line">hexo deploy --generate</div><div class="line">hexo deploy -g</div><div class="line">hexo<span class="built_in"> server </span>-g</div></pre></td></tr></table></figure>
+<h3 id="草稿"><a href="#草稿" class="headerlink" title="草稿"></a>草稿</h3><pre><code>hexo publish [layout] &lt;title&gt;
+</code></pre><h3 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h3><figure class="highlight axapta"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">hexo <span class="keyword">new</span> <span class="string">"postName"</span> <span class="meta">#新建文章</span></div><div class="line">hexo <span class="keyword">new</span> page <span class="string">"pageName"</span> <span class="meta">#新建页面</span></div><div class="line">hexo generate <span class="meta">#生成静态页面至public目录</span></div><div class="line">hexo <span class="keyword">server</span> <span class="meta">#开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></div><div class="line">hexo deploy <span class="meta">#将.deploy目录部署到GitHub</span></div><div class="line"></div><div class="line">hexo <span class="keyword">new</span> [layout] &lt;title&gt;</div><div class="line">hexo <span class="keyword">new</span> photo <span class="string">"My Gallery"</span></div><div class="line">hexo <span class="keyword">new</span> <span class="string">"Hello World"</span> --lang tw</div></pre></td></tr></table></figure>
+<p>更多的hexo命令可以到<a href="http://segmentfault.com/a/1190000002632530#articleHeader10" target="_blank" rel="external">这里</a>查看</p>
+</section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#hexo" >
+    <span class="tag-code">hexo</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2015/12/22/html/">
+        <span class="nav-arrow">← </span>
+        
+          HTML笔记
+        
+      </a>
+    
+    
+      <a class="nav-right" href="/2016/01/26/hexo-github-gitcafe/">
+        
+          把Hexo同时部署到GitHub和GitCafe
+        
+        <span class="nav-arrow"> →</span>
+      </a>
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
+      </div>
+    
+    <!-- 二维码 END -->
+    
+      <!-- Valine START -->
+      <div id="comments_valine"></div>
+      <script type="text/javascript" src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+      <script type="text/javascript" src='//unpkg.com/valine/dist/Valine.min.js'></script>
+      <!-- Valine END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#前言"><span class="toc-nav-text">前言</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#什么是GitHub-Pages"><span class="toc-nav-text">什么是GitHub Pages</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#什么是Hexo"><span class="toc-nav-text">什么是Hexo</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#为什么要用hexo"><span class="toc-nav-text">为什么要用hexo?</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#配置环境"><span class="toc-nav-text">配置环境</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#安装Node"><span class="toc-nav-text">安装Node</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#安装Git"><span class="toc-nav-text">安装Git</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#申请GitHub"><span class="toc-nav-text">申请GitHub</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#配置SSH"><span class="toc-nav-text">配置SSH</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#hexo安装和使用"><span class="toc-nav-text">hexo安装和使用</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#hexo常用命令"><span class="toc-nav-text">hexo常用命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#简写"><span class="toc-nav-text">简写</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#服务器"><span class="toc-nav-text">服务器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#监视文件变动"><span class="toc-nav-text">监视文件变动</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#完成后部署"><span class="toc-nav-text">完成后部署</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#草稿"><span class="toc-nav-text">草稿</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#模板"><span class="toc-nav-text">模板</span></a></li></ol></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'https://moxinn.com/2016/01/25/hexo-my-blog/';
+    var banner = 'undefined'
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+     // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+        
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+
+    // qrcode
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+
+    // gitment
+    var gitmentConfig = "moxinn";
+    if (gitmentConfig !== 'undefined') {
+      var gitment = new Gitment({
+        id: "Hexo+Github，搭建属于自己的博客",
+        owner: "moxinn",
+        repo: "yangmaoxin.github.io",
+        oauth: {
+          client_id: "0f87e490e00ee3fd87ef",
+          client_secret: "4a9d2b148e7971c2201ad12131ce8bf8159ccd2e"
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+
+    // valine
+    var valineConfig = "gG40u256e5d4nmqKAwbjlz9S-gzGzoHsz";
+    console.log('valineConfig',valineConfig);
+    if (valineConfig !== 'undefined') {
+      new Valine({
+        av: AV,
+        el: '#comments_valine',
+        appId: 'gG40u256e5d4nmqKAwbjlz9S-gzGzoHsz',
+        appKey: 'kQr7vEhzEzVFakiH2IkpTIzx',
+        placeholder: '说点什么吧',
+        notify: false,
+        verify: false,
+        avatar: 'mm',
+        meta: 'nick,mail'.split(','),
+        pageSize: '10',
+        path: window.location.pathname,
+        lang: 'zh-CN'.toLowerCase()
+    })
+    }
+
+
+
+
+  })();
+</script>
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Moxinn &copy; 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<script src="/js/script.js"></script>
+  </body>
+</html>

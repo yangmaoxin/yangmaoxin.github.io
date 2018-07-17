@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="人总需要点什么来坚持下去。或是希望，或是信仰。我和这个世界不熟，但我怀有期待。">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      Photoshop切图 | Moxinn&#39;s Blog
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="/js/qrious.js"></script>
+<script src="/js/gitment.js"></script>
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Moxinn's Blog</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>Photoshop切图</h2>
+  <p class="post-date">2015-12-22</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><h2 id="《网页制作》之Photoshop切图"><a href="#《网页制作》之Photoshop切图" class="headerlink" title="《网页制作》之Photoshop切图"></a>《网页制作》之Photoshop切图</h2><hr>
+<h3 id="工具、面板、视图"><a href="#工具、面板、视图" class="headerlink" title="工具、面板、视图"></a>工具、面板、视图</h3><h4 id="什么是切图"><a href="#什么是切图" class="headerlink" title="什么是切图"></a>什么是切图</h4><ol>
+<li>从设计稿（.psd文件）里切出网页素材（.png/.jpg文件）</li>
+<li>编写代码，在代码中引入切图，实现静态页面</li>
+</ol>
+<h4 id="为什么要切图？"><a href="#为什么要切图？" class="headerlink" title="为什么要切图？"></a>为什么要切图？</h4><p>给网页提供图片素材：</p>
+<ul>
+<li>HTML:img </li>
+<li>CSS:background</li>
+</ul>
+ <a id="more"></a>
+<h3 id="如何切图？—使用PS工具（Photoshop）"><a href="#如何切图？—使用PS工具（Photoshop）" class="headerlink" title="如何切图？—使用PS工具（Photoshop）"></a>如何切图？—使用PS工具（Photoshop）</h3><h4 id="PS首选项设置："><a href="#PS首选项设置：" class="headerlink" title="PS首选项设置："></a>PS首选项设置：</h4><p>编辑&gt;首选项&gt;单位与标尺： 将单位（标尺/文字）改成像素。</p>
+<h4 id="面板："><a href="#面板：" class="headerlink" title="面板："></a>面板：</h4><p>在“窗口”菜单下开启：工具/选项/信息（F8）/图层/历史记录<br>调整面板后，需要保存工作区：窗口&gt;工作区&gt;新建工作区</p>
+<h4 id="切图常用工具："><a href="#切图常用工具：" class="headerlink" title="切图常用工具："></a>切图常用工具：</h4><ul>
+<li>移动工具：在选项面板中设置：自动选择，图层。</li>
+<li>矩形选框工具</li>
+<li>魔棒工具</li>
+<li>裁剪工具+切片工具</li>
+<li>缩放工具：快捷键：放大：Ctrl + 加号；缩小：Ctrl+减号；100%：Ctrl + 1;</li>
+<li>取色器：吸取颜色</li>
+</ul>
+<h4 id="辅助视图"><a href="#辅助视图" class="headerlink" title="辅助视图"></a>辅助视图</h4><p>在“视图”菜单下开启：对齐/标尺（Ctrl+R）/显示&gt;参考线（Ctrl+;）<br>需要开启视图菜单下的显示额外内容，才能看到画布里的参考线和网格。</p>
+<h3 id="测量、取色"><a href="#测量、取色" class="headerlink" title="测量、取色"></a>测量、取色</h3><h4 id="获取设计稿信息："><a href="#获取设计稿信息：" class="headerlink" title="获取设计稿信息："></a>获取设计稿信息：</h4><ul>
+<li>尺寸信息：通过“测量”获取</li>
+<li>颜色信息：通过“取色”获取</li>
+</ul>
+<h4 id="测量（所有数字都要测量）："><a href="#测量（所有数字都要测量）：" class="headerlink" title="测量（所有数字都要测量）："></a>测量（所有数字都要测量）：</h4><ul>
+<li>测量方式：矩形选框工具&amp;信息面板</li>
+<li>测量数据：高度、高度/内边距、外边界/边框、定位、文字大小、行高、背景图位置。</li>
+</ul>
+<h4 id="矩形选框工具："><a href="#矩形选框工具：" class="headerlink" title="矩形选框工具："></a>矩形选框工具：</h4><ul>
+<li>添加到选取：按住Shift</li>
+<li>从选取减去：按住Alt</li>
+<li>与选取交叉：按住Shift+Alt</li>
+</ul>
+<p><strong>选择页面较大区域方法：在左侧画一个小矩形框，在右侧再画一个小矩形框，在信息视图里显示相关区域的大小。</strong></p>
+<h4 id="取色："><a href="#取色：" class="headerlink" title="取色："></a>取色：</h4><ul>
+<li>取色方式：“拾色器&amp;吸管工具”：</li>
+<li>吸取：边框色/背景色/文字色。</li>
+</ul>
+<p><strong>取色工具巧用：使用“魔棒工具”来确定是否是线性渐变。</strong></p>
+<h3 id="切图"><a href="#切图" class="headerlink" title="切图"></a>切图</h3><ul>
+<li><strong>内容性图片</strong> 指的是图片在页面是作为内容存在，如页面中的海报。修饰性图片应保存为 png24（IE6不支持半透明）或png8。</li>
+<li><strong>修饰性图片</strong> 指的是图片在页面中起修饰作用，如页面中的背景和图标。切出的内容性图片应保存为 *.jpg 格式。</li>
+</ul>
+<h4 id="切图步骤"><a href="#切图步骤" class="headerlink" title="切图步骤"></a>切图步骤</h4><p><strong>隐藏文字只留背景</strong></p>
+<blockquote>
+<p>A: 若文字为独立图层，隐藏文字图层</p>
+<ul>
+<li>找到文字图层</li>
+<li>去掉眼睛图标</li>
+</ul>
+<p>B:若文字和背景合并，平铺背景覆盖文字 </p>
+<pre><code>- 矩形选框工具
+- 自由变换（Ctrl+T）(用于背景图像可以拉伸)
+- 使用移动工具+Alt（用于背景图像不能拉伸）
+</code></pre></blockquote>
+<h4 id="切图方法"><a href="#切图方法" class="headerlink" title="切图方法"></a>切图方法</h4><blockquote>
+<p><strong>PNG24切图方法</strong></p>
+<ul>
+<li>移动工具选中所需图层（Ctrl 多选） </li>
+<li>右键合并图层（Ctrl + E）</li>
+<li>复制到新图层，或直接拖至已有文件（新建：Ctrl+N）</li>
+</ul>
+<p><strong>PNG8带背景切图方法</strong></p>
+<ul>
+<li>合并（可见）图层（Shift+Ctrl+E）; </li>
+<li>矩形选框工具选择内容</li>
+<li>魔棒工具去掉多余部分（从选区中减去：按住Alt）</li>
+<li>再右键复制图层到新文件，或直接拖至已有文件（新建：Ctrl+N）</li>
+</ul>
+<p><strong>可平铺背景的切图方法</strong> </p>
+<ul>
+<li>用矩形选择一个区域，复制粘贴到新文件中（平铺内容充满文件的宽(X轴)或高(Yz轴)）</li>
+</ul>
+<p><strong>活动页的切图——适用于可以一刀切的活动页</strong></p>
+<ul>
+<li>拉参考线 </li>
+<li>选择切片工具 </li>
+<li>点击“基于参考线的切片”按钮 </li>
+<li>为切片命名 </li>
+<li>保存（全选切片，统一设置存储格式）</li>
+</ul>
+</blockquote>
+<h3 id="保存"><a href="#保存" class="headerlink" title="保存"></a>保存</h3><p><strong>存储所需内容</strong><br>复制（Ctrl+C）、新建（Ctrl+N）、粘贴（Ctrl+V）<br>存储为web所用格式（Alt+Shift+Ctrl+S）</p>
+<p><strong>保存类型：</strong></p>
+<blockquote>
+<p>A:当图片色彩丰富且无透明要求时，建议保存为JPG格式并选择合适的品质(60-80)。</p>
+<p>B:当图片色彩不太丰富时，无论有无透明要求，保存为PNG8格式。（需设置杂边：无；仿色：无仿色。）</p>
+<p>C:当图片有半透明要求时，保存为PNG24格式。</p>
+<p>D:为保证图片质量，需保留一份PSD, 在PSD上进行修改。</p>
+</blockquote>
+<h3 id="修改、维护"><a href="#修改、维护" class="headerlink" title="修改、维护"></a>修改、维护</h3><blockquote>
+<p>A:更改画布大小： 图像&gt;画布大小&gt;更改尺寸，同时将“定位”选在左上角。</p>
+<p>B:移动图标： 若图标为独立图层，则用移动工具拖动即可；若图标为非独立图层，先选用矩形选框工具选中图层，在用移动工具拖动即可。</p>
+<p>C:减小画布到指定区域：用矩形选框工具选定选区–裁剪（或直接用裁剪工具裁剪）</p>
+<p>D:修改PNG8图像时，需要更改颜色模式为：RGB格式。（PNG8默认颜色为索引颜色，直接修改会使颜色失真。）</p>
+</blockquote>
+<h3 id="图片优化与合并"><a href="#图片优化与合并" class="headerlink" title="图片优化与合并"></a>图片优化与合并</h3><h4 id="使用背景图"><a href="#使用背景图" class="headerlink" title="使用背景图"></a>使用背景图</h4><h4 id="图片合并方案"><a href="#图片合并方案" class="headerlink" title="图片合并方案"></a>图片合并方案</h4><p><strong>Sprite拼图</strong>：把设计稿里的小图标，拼合在一张图片上。<br>Sprite拼图好处：减少网络请求，提升网页加载速度。</p>
+<h4 id="图片优化合并："><a href="#图片优化合并：" class="headerlink" title="图片优化合并："></a>图片优化合并：</h4><p><strong>大小与质量</strong></p>
+<ul>
+<li>平衡与取舍：选择合适的图片大小与合适的图片质量</li>
+<li>压缩工具：无损压缩 Minimage；有损压缩 TinyPng</li>
+</ul>
+<p><strong>图片合并建议方案：</strong></p>
+<ul>
+<li>同个模块的图片合并 </li>
+<li>大小相近的图片合并 </li>
+<li>色彩相近的图片合并 </li>
+<li>以上3种合并混合</li>
+</ul>
+<blockquote>
+<p>合并的图片可以以横向或纵向的排列，分类可将同属于一个模块（功能模块），大小相近（充分利用画布空间），颜色相近（减少文件大小）。<br>浏览器兼容方案</p>
+</blockquote>
+<h3 id="浏览器兼容方案"><a href="#浏览器兼容方案" class="headerlink" title="浏览器兼容方案"></a>浏览器兼容方案</h3><ul>
+<li>IT6不支持PNG24半透明：存2份：png 24; sprite_ie.png 8. </li>
+<li>CSS3&amp;切图:</li>
+</ul>
+<p>高级浏览器CSS3,低级浏览器用切图，hack处理；<br>优雅降级原则：都用CSS3处理，低级浏览器里没有效果。</p>
+</section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#前端微专业笔记" >
+    <span class="tag-code">前端微专业笔记</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+    
+      <a class="nav-right" href="/2015/12/22/html/">
+        
+          HTML笔记
+        
+        <span class="nav-arrow"> →</span>
+      </a>
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
+      </div>
+    
+    <!-- 二维码 END -->
+    
+      <!-- Valine START -->
+      <div id="comments_valine"></div>
+      <script type="text/javascript" src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+      <script type="text/javascript" src='//unpkg.com/valine/dist/Valine.min.js'></script>
+      <!-- Valine END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#《网页制作》之Photoshop切图"><span class="toc-nav-text">《网页制作》之Photoshop切图</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#工具、面板、视图"><span class="toc-nav-text">工具、面板、视图</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#什么是切图"><span class="toc-nav-text">什么是切图</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#为什么要切图？"><span class="toc-nav-text">为什么要切图？</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#如何切图？—使用PS工具（Photoshop）"><span class="toc-nav-text">如何切图？—使用PS工具（Photoshop）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#PS首选项设置："><span class="toc-nav-text">PS首选项设置：</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#面板："><span class="toc-nav-text">面板：</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#切图常用工具："><span class="toc-nav-text">切图常用工具：</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#辅助视图"><span class="toc-nav-text">辅助视图</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#测量、取色"><span class="toc-nav-text">测量、取色</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#获取设计稿信息："><span class="toc-nav-text">获取设计稿信息：</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#测量（所有数字都要测量）："><span class="toc-nav-text">测量（所有数字都要测量）：</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#矩形选框工具："><span class="toc-nav-text">矩形选框工具：</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#取色："><span class="toc-nav-text">取色：</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#切图"><span class="toc-nav-text">切图</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#切图步骤"><span class="toc-nav-text">切图步骤</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#切图方法"><span class="toc-nav-text">切图方法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#保存"><span class="toc-nav-text">保存</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改、维护"><span class="toc-nav-text">修改、维护</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#图片优化与合并"><span class="toc-nav-text">图片优化与合并</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#使用背景图"><span class="toc-nav-text">使用背景图</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#图片合并方案"><span class="toc-nav-text">图片合并方案</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#图片优化合并："><span class="toc-nav-text">图片优化合并：</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#浏览器兼容方案"><span class="toc-nav-text">浏览器兼容方案</span></a></li></ol></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'https://moxinn.com/2015/12/22/photoshop/';
+    var banner = 'undefined'
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+     // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+        
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+
+    // qrcode
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+
+    // gitment
+    var gitmentConfig = "moxinn";
+    if (gitmentConfig !== 'undefined') {
+      var gitment = new Gitment({
+        id: "Photoshop切图",
+        owner: "moxinn",
+        repo: "yangmaoxin.github.io",
+        oauth: {
+          client_id: "0f87e490e00ee3fd87ef",
+          client_secret: "4a9d2b148e7971c2201ad12131ce8bf8159ccd2e"
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+
+    // valine
+    var valineConfig = "gG40u256e5d4nmqKAwbjlz9S-gzGzoHsz";
+    console.log('valineConfig',valineConfig);
+    if (valineConfig !== 'undefined') {
+      new Valine({
+        av: AV,
+        el: '#comments_valine',
+        appId: 'gG40u256e5d4nmqKAwbjlz9S-gzGzoHsz',
+        appKey: 'kQr7vEhzEzVFakiH2IkpTIzx',
+        placeholder: '说点什么吧',
+        notify: false,
+        verify: false,
+        avatar: 'mm',
+        meta: 'nick,mail'.split(','),
+        pageSize: '10',
+        path: window.location.pathname,
+        lang: 'zh-CN'.toLowerCase()
+    })
+    }
+
+
+
+
+  })();
+</script>
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Moxinn &copy; 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<script src="/js/script.js"></script>
+  </body>
+</html>

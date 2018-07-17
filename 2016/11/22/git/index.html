@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="人总需要点什么来坚持下去。或是希望，或是信仰。我和这个世界不熟，但我怀有期待。">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      Git命令速查表－好记性不如一张表 | Moxinn&#39;s Blog
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="/js/qrious.js"></script>
+<script src="/js/gitment.js"></script>
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Moxinn's Blog</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>Git命令速查表－好记性不如一张表</h2>
+  <p class="post-date">2016-11-22</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><p><blockquote class="blockquote-center">记录常用Git命令</blockquote><br><a id="more"></a></p>
+<h2 id="Git常用命令速查表"><a href="#Git常用命令速查表" class="headerlink" title="Git常用命令速查表"></a>Git常用命令速查表</h2><p><img src="http://photo.yangmaoxin.cn/git.png" alt="git"></p>
+<p>这张表包含了大部分我们上传项目代码时用到的命令。</p>
+<h2 id="常见命令"><a href="#常见命令" class="headerlink" title="常见命令"></a>常见命令</h2><blockquote>
+<p>1.初始化一个代码仓库<br>git init<br>2.如果使用git必须给git配置一个用户名和邮箱<br>给当前的git仓库配置一个用户名和邮箱<br>git config user.name “XXX”<br>git config user.email “XXX”<br>配置一个全局的用户名和邮箱<br>git config —global user.name “XXX”<br>git config —global user.email “XXX”<br>3.初始化项目<br>touch main.m : 创建了main.m<br>git add main.m : 将新添加的文件或者修改的文件添加到暂存区<br>git commit -m “初始化项目”<br>git add . : 将所有没有被添加到暂存区或者代码仓库的文件添加到暂存区<br>注意:无论是新添加的文件或者修改的文件,都需要先通过add命令添加到暂存区中,之后再通过commit命令添加到本地仓库中<br>4.查看文件的状态 git status<br>红色 : 新创建的文件或者被修改的文件,没有被添加到暂存区<br>绿色 : 表示文件在暂存区,但是没有被添加到本地仓库中<br>5.给命令起别名<br>git config alias.st “status”<br>git config alias.ci “commit -m”<br>git config —global alias.st “status”<br>6.git删除文件<br>git rm 文件名<br>7.查看版本号<br>git log<br>git reflog<br>git config –global alias.lg “log –color –graph -<br>8.git的版本号是由sha1算法生成40位的哈希值<br>9.版本回退<br>git reset —hard HEAD : 回退到当前的版本<br>git reset —hard HEAD^ : 回退到上一个版本<br>git reset —hard HEAD^^ : 回退到上上个版本<br>git reset —hard HEAD~100 : 回退到前100版本<br>git reset -hard 版本号(前5位)</p>
+</blockquote>
+<h2 id="团队-共享版本库"><a href="#团队-共享版本库" class="headerlink" title="团队(共享版本库)"></a>团队(共享版本库)</h2><blockquote>
+<p>1.初始项目<br>git init —bare<br>2.项目经理将共享版本库的内容先下载下来<br>git clone 地址<br>3.添加需要忽略的文件<br>touch .gitignore<br>去github上搜索.gitignore-&gt;Objective-C<br>git add .gitignore<br>git commit -m “添加了需要忽略的文件”<br>4.项目经理初始化项目<br>git commit -m “初始化项目”—&gt;提交到本地代码仓库<br>5.将项目push远程仓库中<br>git push origin<br>6.当源代码管理是使用GIT,并且在Xcode进行多人开发的操作<br>注意:当使用GIT,项目中用到了静态库就不需要通过命令行进行添加</p>
+</blockquote>
+<h2 id="版本备份"><a href="#版本备份" class="headerlink" title="版本备份"></a>版本备份</h2><blockquote>
+<p>1.1.0版本开发完成,之后对1.0版本进行备份<br>git tag -a weibo1.0 -m “这个是1.0版本” : 给某一个版本打上标签<br>git tag : 查看所有的标签<br>2.需要将1.0版本的标签,push到服务器<br>git push origin weibo1.0<br>3.继续开发2.0版本<br>4.发现1.0版本有bug,从标签里面clone 1.0版本,从标签创建一个fixbug分支,在分支中修复bug<br>git clone 共享版本库<br>git checkout weibo1.0(标签的名称)<br>git checkout -b weibo1.1fixbug(分支名称)<br>5.修复后的版本上传AppStore/将1.0fixbug进行备份/将1.0fixbug版本和2.0版本进行合并\<br>git tag -a weibo1.1 -m “这个是修复了1.0版本bug的1.1版本”<br>git tag<br>git push origin weibo1.1<br>将子分支中代码合并到主分支,pull—&gt;weibo1.1fixbug—&gt;push master—&gt;其它同事更新<br>6.删除分支<br>git branch -r<br>git branch -r -d 分支名称</p>
+</blockquote>
+<h2 id="将代码托管至别人的服务器上"><a href="#将代码托管至别人的服务器上" class="headerlink" title="将代码托管至别人的服务器上"></a>将代码托管至别人的服务器上</h2><blockquote>
+<p>1.Github<br>创建Github上的仓库<br>1) HTTPS : http + SSL<br>2) SSH : 公钥和私钥—&gt;settings—&gt;SSH Keys—&gt;生成公钥和私钥<br>删除代码仓库<br>可以给别人的代码提比较功能/对别人的代码重构:fork—&gt;pull Request<br>issues : 给框架作者提问题</p>
+<p>参考阅读</p>
+<ul>
+<li><a href="http://www.jianshu.com/p/0c808b2ee952" target="_blank" rel="external">详细流程可参考 </a> </li>
+</ul>
+</blockquote>
+</section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#git" >
+    <span class="tag-code">git</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2016/09/01/automatic-backup/">
+        <span class="nav-arrow">← </span>
+        
+          自动备份与恢复Hexo博客源文件
+        
+      </a>
+    
+    
+      <a class="nav-right" href="/2018/07/17/vscode-backup/">
+        
+          备份vscode的插件
+        
+        <span class="nav-arrow"> →</span>
+      </a>
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
+      </div>
+    
+    <!-- 二维码 END -->
+    
+      <!-- Valine START -->
+      <div id="comments_valine"></div>
+      <script type="text/javascript" src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+      <script type="text/javascript" src='//unpkg.com/valine/dist/Valine.min.js'></script>
+      <!-- Valine END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Git常用命令速查表"><span class="toc-nav-text">Git常用命令速查表</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#常见命令"><span class="toc-nav-text">常见命令</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#团队-共享版本库"><span class="toc-nav-text">团队(共享版本库)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#版本备份"><span class="toc-nav-text">版本备份</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#将代码托管至别人的服务器上"><span class="toc-nav-text">将代码托管至别人的服务器上</span></a></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'https://moxinn.com/2016/11/22/git/';
+    var banner = 'undefined'
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+     // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+        
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+
+    // qrcode
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+
+    // gitment
+    var gitmentConfig = "moxinn";
+    if (gitmentConfig !== 'undefined') {
+      var gitment = new Gitment({
+        id: "Git命令速查表－好记性不如一张表",
+        owner: "moxinn",
+        repo: "yangmaoxin.github.io",
+        oauth: {
+          client_id: "0f87e490e00ee3fd87ef",
+          client_secret: "4a9d2b148e7971c2201ad12131ce8bf8159ccd2e"
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+
+    // valine
+    var valineConfig = "gG40u256e5d4nmqKAwbjlz9S-gzGzoHsz";
+    console.log('valineConfig',valineConfig);
+    if (valineConfig !== 'undefined') {
+      new Valine({
+        av: AV,
+        el: '#comments_valine',
+        appId: 'gG40u256e5d4nmqKAwbjlz9S-gzGzoHsz',
+        appKey: 'kQr7vEhzEzVFakiH2IkpTIzx',
+        placeholder: '说点什么吧',
+        notify: false,
+        verify: false,
+        avatar: 'mm',
+        meta: 'nick,mail'.split(','),
+        pageSize: '10',
+        path: window.location.pathname,
+        lang: 'zh-CN'.toLowerCase()
+    })
+    }
+
+
+
+
+  })();
+</script>
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Moxinn &copy; 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<script src="/js/script.js"></script>
+  </body>
+</html>

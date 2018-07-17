@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="人总需要点什么来坚持下去。或是希望，或是信仰。我和这个世界不熟，但我怀有期待。">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      把Hexo同时部署到GitHub和Coding | Moxinn&#39;s Blog
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="/js/qrious.js"></script>
+<script src="/js/gitment.js"></script>
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Moxinn's Blog</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>把Hexo同时部署到GitHub和Coding</h2>
+  <p class="post-date">2016-08-31</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><p><blockquote class="blockquote-center">因为Gitcafe已经被Coding收购，修改同时更新到Github以及Coding。</blockquote><br><a id="more"></a></p>
+<h2 id="设置Coding"><a href="#设置Coding" class="headerlink" title="设置Coding"></a>设置Coding</h2><p>在Coding上创建一个项目，项目名最好与注册时的账户用户名相同，这样比较方便。在之后使用Coding Pages可以通过 <code>{用户名}.coding.me</code> 形式的 URL 直接访问。</p>
+<h2 id="设置SSH"><a href="#设置SSH" class="headerlink" title="设置SSH"></a>设置SSH</h2><p>如果是第一次使用coding的话，需要设置SSH公钥，生成的方法可以参考<a href="https://coding.net/help/doc/git/ssh-key.html" target="_blank" rel="external">coding帮助中心</a></p>
+<p>之前我在部署Github时已经配置过Github的公钥，所以这里直接使用。<br><img src="http://photo.yangmaoxin.cn/addssh.png" alt="ssh目录"></p>
+<p>本地文件夹中存在了，一般存放在<code>~/.ssh/id_rsa.pub</code>。复制这个文件夹下的<code>id_rsa.pub</code> 内容添加在coding的个人页面内，如下<br><img src="http://photo.yangmaoxin.cn/coding1.png" alt="1"></p>
+<blockquote>
+<p>注意这是在个人账户下添加了ssh,以后新建了项目，项目也有个ssh，但是那个是只读的，不要加到那里去。只需要在个人账户下，加入了即可。</p>
+</blockquote>
+<p>验证是否连接成功:</p>
+<p><code>ssh -T git@git.coding.net</code></p>
+<p>提示如下即可：<br><code>Hello iymx You&#39;ve connected to Coding.net by SSH successfully!</code></p>
+<h2 id="修改-config-yml"><a href="#修改-config-yml" class="headerlink" title="修改_config.yml"></a>修改_config.yml</h2><p>修改Hexo根目录下的_config.yml文件中的deploy<br>根据Hexo官方文档需要修改成下面的形式</p>
+<blockquote>
+<p>deploy:<br>  type: git<br>  message: [message]<br>  repo:<br>    github: <repository url="">,[branch]<br>    gitcafe: <repository url="">,[branch] </repository></repository></p>
+</blockquote>
+<p>例如我的是这样<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">deploy</span>:</div><div class="line">  <span class="attribute">type</span>: git</div><div class="line">  <span class="attribute">message</span>: <span class="string">""</span></div><div class="line">  <span class="attribute">repo</span>: </div><div class="line">    <span class="attribute">github</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:yangmaoxin/yangmaoxin.github.io.git,master</div><div class="line">    <span class="attribute">coding</span>: git<span class="variable">@git</span>.coding.<span class="attribute">net</span>:iymx/iymx.git,master</div></pre></td></tr></table></figure></p>
+<p>将自己在Github和Coding上的git填进去</p>
+<p>最后使用部署命令就能把博客同步到coding上面：<br><code>hexo deploy -g</code></p>
+<h2 id="Coding-Pages服务方式部署"><a href="#Coding-Pages服务方式部署" class="headerlink" title="Coding Pages服务方式部署"></a>Coding Pages服务方式部署</h2><p>和Github Pages一样。项目名字必须与Coding的用户名一致。</p>
+<blockquote>
+<p>在source/需要创建一个空白文件，至于原因，是因为<br>coding.net需要这个文件来作为以静态文件部署的标志。就是说看到这个Staticfile就知道按照静态文件来发布。</p>
+</blockquote>
+<pre><code>cd source/
+touch Staticfile  #名字必须是Staticfile
+</code></pre><p>只需要在这里开启Page<br><img src="http://photo.yangmaoxin.cn/codingpages.png" alt="codingpages"></p>
+<p>因为前面配置的分支是master,因此需要部署分支master。</p>
+<p>如果项目名和Coding的用户名一样，比如我的用户是iyxm,博客项目名也是iymx<br>那直接访问  <a href="http://igeek.wang" target="_blank" rel="external">iymx.coding.me</a><br>就能访问博客，否则就要带上项目名：iymx.coding.me/项目名 才能访问<br>推荐项目名跟用户名一样，这样就可以省略项目名。</p>
+<h2 id="万网域名双线解析"><a href="#万网域名双线解析" class="headerlink" title="万网域名双线解析"></a>万网域名双线解析</h2><p>进入万网/阿里云后台，域名解析：</p>
+<p><img src="http://photo.yangmaoxin.cn/githubcoding.png" alt="域名解析"></p>
+<p>添加两条CNAME，分别解析，解析路线选择默认至Coding，海外IP至GitHub。</p>
+</section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#hexo" >
+    <span class="tag-code">hexo</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2016/02/27/layout/">
+        <span class="nav-arrow">← </span>
+        
+          多列布局方案整理
+        
+      </a>
+    
+    
+      <a class="nav-right" href="/2016/09/01/automatic-backup/">
+        
+          自动备份与恢复Hexo博客源文件
+        
+        <span class="nav-arrow"> →</span>
+      </a>
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
+      </div>
+    
+    <!-- 二维码 END -->
+    
+      <!-- Valine START -->
+      <div id="comments_valine"></div>
+      <script type="text/javascript" src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+      <script type="text/javascript" src='//unpkg.com/valine/dist/Valine.min.js'></script>
+      <!-- Valine END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#设置Coding"><span class="toc-nav-text">设置Coding</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#设置SSH"><span class="toc-nav-text">设置SSH</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#修改-config-yml"><span class="toc-nav-text">修改_config.yml</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Coding-Pages服务方式部署"><span class="toc-nav-text">Coding Pages服务方式部署</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#万网域名双线解析"><span class="toc-nav-text">万网域名双线解析</span></a></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'https://moxinn.com/2016/08/31/hexo-coding-github/';
+    var banner = 'undefined'
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+     // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+        
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+
+    // qrcode
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+
+    // gitment
+    var gitmentConfig = "moxinn";
+    if (gitmentConfig !== 'undefined') {
+      var gitment = new Gitment({
+        id: "把Hexo同时部署到GitHub和Coding",
+        owner: "moxinn",
+        repo: "yangmaoxin.github.io",
+        oauth: {
+          client_id: "0f87e490e00ee3fd87ef",
+          client_secret: "4a9d2b148e7971c2201ad12131ce8bf8159ccd2e"
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+
+    // valine
+    var valineConfig = "gG40u256e5d4nmqKAwbjlz9S-gzGzoHsz";
+    console.log('valineConfig',valineConfig);
+    if (valineConfig !== 'undefined') {
+      new Valine({
+        av: AV,
+        el: '#comments_valine',
+        appId: 'gG40u256e5d4nmqKAwbjlz9S-gzGzoHsz',
+        appKey: 'kQr7vEhzEzVFakiH2IkpTIzx',
+        placeholder: '说点什么吧',
+        notify: false,
+        verify: false,
+        avatar: 'mm',
+        meta: 'nick,mail'.split(','),
+        pageSize: '10',
+        path: window.location.pathname,
+        lang: 'zh-CN'.toLowerCase()
+    })
+    }
+
+
+
+
+  })();
+</script>
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Moxinn &copy; 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<script src="/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="人总需要点什么来坚持下去。或是希望，或是信仰。我和这个世界不熟，但我怀有期待。">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      多列布局方案整理 | Moxinn&#39;s Blog
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="/js/qrious.js"></script>
+<script src="/js/gitment.js"></script>
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Moxinn's Blog</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>多列布局方案整理</h2>
+  <p class="post-date">2016-02-27</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><blockquote>
+<p>了解 CSS 中属性的值及其特性， 透彻分析问题和需求才可以选择和设计最适合的布局解决方案。</p>
+</blockquote>
+<p>多列布局在网页中非常常见（例如两列布局），多列布局可以是两列定宽，一列自适应， 或者多列不定宽一列自适应还有等分布局等。<br><a id="more"></a></p>
+<h2 id="定宽-自适应"><a href="#定宽-自适应" class="headerlink" title="定宽-自适应"></a>定宽-自适应</h2><p>有如下布局<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"parent"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>left<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>right<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>right<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="float-margin"><a href="#float-margin" class="headerlink" title="float+margin"></a>float+margin</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.left</span> &#123;</div><div class="line">  <span class="attribute">float</span>: left;</div><div class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.right</span> &#123;</div><div class="line">  <span class="attribute">margin-left</span>: <span class="number">100px</span></div><div class="line">  <span class="comment">/*间距可再加入 margin-left */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://7xkrpj.com1.z1.glb.clouddn.com/float+margin.png" alt="图片描述"></p>
+<p>优点：容易理解<br>缺点：IE6中会有3像素的BUG， 解决方法可以在.left 加入 <code>margin-left:-3px</code>。<br>因为left是浮动元素，right是没有浮动的，如果right内容中有清楚浮动就会产生bug。</p>
+<p><img src="http://7xkrpj.com1.z1.glb.clouddn.com/float+margin-bug.png" alt="图片描述"></p>
+<h3 id="改进：float-margin-fix"><a href="#改进：float-margin-fix" class="headerlink" title="改进：float + margin + (fix)"></a>改进：float + margin + (fix)</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"parent"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>left<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    /*外层在包裹一个容器*/</div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right-fix"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>right<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>right<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="css">  <span class="selector-class">.left</span> &#123;</span></div><div class="line"><span class="undefined">    float: left;</span></div><div class="line"><span class="undefined">    width: 100px;</span></div><div class="line"><span class="undefined">  &#125;</span></div><div class="line"><span class="css">  <span class="selector-class">.right-fix</span> &#123;</span></div><div class="line"><span class="undefined">    float: right;</span></div><div class="line"><span class="undefined">    width: 100%;</span></div><div class="line"><span class="undefined">    margin-left: -100px;</span></div><div class="line"><span class="undefined">  &#125;</span></div><div class="line"><span class="css">  <span class="selector-class">.right</span> &#123;</span></div><div class="line"><span class="undefined">    margin-left: 100px</span></div><div class="line"><span class="css">    <span class="comment">/*间距可再加入 margin-left */</span></span></div><div class="line"><span class="undefined">  &#125;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>兼容性很好，适用于多版本浏览器（包括 IE6）但是多了层right-fix的结构。但left不可选择，被right-fix盖住。需要设置left的 <code>position: relative;</code>来提高层级。</p>
+<h3 id="float-overflow"><a href="#float-overflow" class="headerlink" title="float+overflow"></a>float+overflow</h3><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.left</span>&#123; </div><div class="line">      <span class="attribute">float</span>: left;</div><div class="line">      <span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">      <span class="attribute">margin-right</span>: <span class="number">20px</span>;</div><div class="line"> &#125;</div><div class="line"> <span class="selector-class">.right</span>&#123; <span class="attribute">overflow</span>: hidden; <span class="comment">//触发BFC &#125;</span></div></pre></td></tr></table></figure>
+<p><code>overflow:hidden</code>使得div产生了BFC 模式（Block Formatting Context）块级格式化文本，根据BFC的布局规则之一，div那个产生的BFC区域不会与左边浮动的元素所重叠。具体什么是BFC可以看看这篇<a href="http://www.cnblogs.com/dojo-lzz/p/3999013.html" target="_blank" rel="external">文章</a></p>
+<h3 id="table"><a href="#table" class="headerlink" title="table"></a>table</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.parent</span> &#123;</div><div class="line">   <span class="attribute">display</span>: table;</div><div class="line">   <span class="attribute">width</span>: <span class="number">100%</span>;</div><div class="line">   <span class="attribute">table-layout</span>: fixed;</div><div class="line"> &#125;</div><div class="line"> <span class="selector-class">.left</span> &#123;</div><div class="line">   <span class="attribute">display</span>: table-cell;</div><div class="line">   <span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line"> &#125;</div><div class="line"> <span class="selector-class">.right</span> &#123;</div><div class="line">   <span class="attribute">display</span>: table-cell;</div><div class="line">   <span class="comment">/*宽度为剩余宽度*/</span></div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<p><code>table</code> 的显示特性为每列的单元格宽度合一定等与表格宽度。 <code>table-layout: fixed;</code> 可加速渲染，也是设定布局优先。</p>
+<p><code>table-cell</code> 中不可以设置 <code>margin</code> 但是可以通过 <code>padding</code> 来设置间距。</p>
+<h3 id="flex"><a href="#flex" class="headerlink" title="flex"></a>flex</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.parent</span>&#123; </div><div class="line">     <span class="attribute">display</span>: flex ; </div><div class="line"> &#125;</div><div class="line"><span class="selector-class">.left</span> &#123; </div><div class="line">      <span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">      <span class="attribute">margin-right</span>: <span class="number">20px</span>;</div><div class="line"> &#125;</div><div class="line"> <span class="selector-class">.right</span>&#123;</div><div class="line">	<span class="comment">/*等价于flex:1 1 0; 增长因子和收缩因子都为1，</span></div><div class="line"><span class="comment">        基础宽度为0,那么剩余宽度都分配给right*/</span></div><div class="line">       <span class="attribute">flex</span>: <span class="number">1</span> ; </div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<p><code>flex-item</code> 默认为内容宽度。<br>缺点： CSS3 兼容性。根据内容判断，性能会有问题，做小范围布局，不适合大范围布局。</p>
+<h2 id="不定宽-自适应"><a href="#不定宽-自适应" class="headerlink" title="不定宽-自适应"></a>不定宽-自适应</h2><p><img src="http://7xkrpj.com1.z1.glb.clouddn.com/%E4%B8%8D%E5%AE%9A%E5%AE%BD+%E8%87%AA%E9%80%82%E5%BA%94.png" alt="图片描述"></p>
+<h3 id="float-overflow-1"><a href="#float-overflow-1" class="headerlink" title="float + overflow"></a>float + overflow</h3><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.left</span>&#123; </div><div class="line">     <span class="attribute">float</span>: left;</div><div class="line">     <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">     <span class="attribute">margin-right</span>: <span class="number">20px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.right</span>&#123; <span class="attribute">overflow</span>: hidden; <span class="comment">//触发BFC &#125;</span></div></pre></td></tr></table></figure>
+<h3 id="table-1"><a href="#table-1" class="headerlink" title="table"></a>table</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">.parent&#123; </div><div class="line">     <span class="attribute">display</span>:table; </div><div class="line">     <span class="attribute">width</span>: <span class="number">100%</span>;</div><div class="line"> &#125;</div><div class="line"><span class="selector-class">.left</span>, <span class="selector-class">.right</span> &#123; </div><div class="line">      <span class="attribute">display</span>: table-cell;</div><div class="line"> &#125;</div><div class="line"> .<span class="attribute">left</span>&#123; </div><div class="line">      <span class="attribute">width</span>:<span class="number">0.1%</span>;  <span class="comment">//写的够小就行，不写1px的原因是IE8会有问题</span></div><div class="line">      <span class="attribute">padding-right</span>:<span class="number">20px</span>; </div><div class="line">  &#125;</div><div class="line"> <span class="selector-class">.left</span> p&#123; <span class="attribute">width</span> : <span class="number">200px</span>;&#125;  <span class="comment">//用内部元素撑开，宽度可以不定</span></div></pre></td></tr></table></figure>
+<h3 id="flex-1"><a href="#flex-1" class="headerlink" title="flex"></a>flex</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.parent</span>&#123;<span class="attribute">display</span>:flex;&#125;</div><div class="line"><span class="selector-class">.left</span>&#123;<span class="attribute">margin-right</span>:<span class="number">20px</span>;&#125;</div><div class="line"><span class="selector-class">.right</span>&#123;<span class="attribute">flex</span>:<span class="number">1</span>;&#125;</div></pre></td></tr></table></figure>
+<p>三列不定宽 + 自适应 与两列的做法一样</p>
+<h2 id="等分布局"><a href="#等分布局" class="headerlink" title="等分布局"></a>等分布局</h2><p>每一列的宽度和间距均相等。<br>有如下HTML结构<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"parent"</span>&gt;</div><div class="line">	&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"column"</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>1<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line">	&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"column"</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>2<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line">	&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"column"</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>3<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line">	&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"column"</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>4<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line">&lt;<span class="regexp">/div&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="float"><a href="#float" class="headerlink" title="float"></a>float</h3><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.parent</span>&#123;</div><div class="line">   <span class="attribute">margin-left</span> ：-20px; <span class="comment">//为父元素增加20px宽度</span></div><div class="line">   &#125;</div><div class="line"><span class="selector-class">.column</span>&#123;</div><div class="line">      <span class="attribute">float</span> : left;</div><div class="line">      <span class="attribute">width</span>: <span class="number">25%</span>;</div><div class="line">      <span class="attribute">padding-left</span> : <span class="number">20px</span>;</div><div class="line">      <span class="attribute">box-sizing</span> : border-box;</div><div class="line">     &#125;</div></pre></td></tr></table></figure>
+<p><img src="http://7xkrpj.com1.z1.glb.clouddn.com/%E7%AD%89%E5%88%86%E5%B8%83%E5%B1%80%E6%95%88%E6%9E%9C%E5%9B%BE.png" alt="图片描述"><br>缺点：结构和样式稍微有点耦合性</p>
+<h3 id="table-2"><a href="#table-2" class="headerlink" title="table"></a>table</h3><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.parent-fix</span>&#123;  <span class="attribute">margin-left</span> ：-20px; <span class="comment">//为父元素增加20px宽度 &#125;</span></div><div class="line"><span class="selector-class">.parent</span>&#123; </div><div class="line">     <span class="attribute">display</span> : table;</div><div class="line">     <span class="attribute">width</span> : <span class="number">100%</span>;</div><div class="line">     <span class="selector-tag">table</span>-layout : fixed;</div><div class="line"> &#125;     </div><div class="line"> <span class="selector-class">.column</span>&#123;</div><div class="line">      <span class="attribute">float</span> : left;</div><div class="line">      <span class="attribute">width</span>: <span class="number">25%</span>;</div><div class="line">      <span class="attribute">padding-left</span> : <span class="number">20px</span>;</div><div class="line">      <span class="attribute">box-sizing</span> : border-box;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<h3 id="fix"><a href="#fix" class="headerlink" title="fix"></a>fix</h3><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.parent</span>&#123; </div><div class="line">     <span class="attribute">display</span> : flex;</div><div class="line"> &#125;     </div><div class="line"> <span class="selector-class">.column</span>&#123;</div><div class="line">     <span class="attribute">flex</span>: <span class="number">1</span>;</div><div class="line"> &#125;</div><div class="line"> <span class="selector-class">.column</span>+<span class="selector-class">.column</span>&#123;  <span class="attribute">margin-left</span>: <span class="number">20px</span>;  &#125; <span class="comment">//选择2，3，4</span></div></pre></td></tr></table></figure>
+<h2 id="等高需求"><a href="#等高需求" class="headerlink" title="等高需求"></a>等高需求</h2><h3 id="table-3"><a href="#table-3" class="headerlink" title="table"></a>table</h3><p>上面自适应的table布局就具有登高的布局</p>
+<h3 id="flex-2"><a href="#flex-2" class="headerlink" title="flex"></a>flex</h3><p>如上面自适应的例子，flex 天然等高</p>
+<h3 id="float-1"><a href="#float-1" class="headerlink" title="float"></a>float</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.parent</span>&#123;  <span class="attribute">overflow </span>: hidden; &#125;</div><div class="line"><span class="selector-class">.left</span>, <span class="selector-class">.right</span>&#123;</div><div class="line">      <span class="attribute">padding-bottom </span>: <span class="number">9999px</span>;</div><div class="line">      <span class="attribute">margin-bottom </span>: -<span class="number">9999px</span>;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<p>优点是兼容性比较好<br>缺点是伪等高 不是正真意义上的登高</p>
+</section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#前端微专业笔记" >
+    <span class="tag-code">前端微专业笔记</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2016/02/27/wynotes/">
+        <span class="nav-arrow">← </span>
+        
+          网易前端微专业------页面架构笔记
+        
+      </a>
+    
+    
+      <a class="nav-right" href="/2016/08/31/hexo-coding-github/">
+        
+          把Hexo同时部署到GitHub和Coding
+        
+        <span class="nav-arrow"> →</span>
+      </a>
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
+      </div>
+    
+    <!-- 二维码 END -->
+    
+      <!-- Valine START -->
+      <div id="comments_valine"></div>
+      <script type="text/javascript" src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+      <script type="text/javascript" src='//unpkg.com/valine/dist/Valine.min.js'></script>
+      <!-- Valine END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#定宽-自适应"><span class="toc-nav-text">定宽-自适应</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#float-margin"><span class="toc-nav-text">float+margin</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#改进：float-margin-fix"><span class="toc-nav-text">改进：float + margin + (fix)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#float-overflow"><span class="toc-nav-text">float+overflow</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#table"><span class="toc-nav-text">table</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#flex"><span class="toc-nav-text">flex</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#不定宽-自适应"><span class="toc-nav-text">不定宽-自适应</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#float-overflow-1"><span class="toc-nav-text">float + overflow</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#table-1"><span class="toc-nav-text">table</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#flex-1"><span class="toc-nav-text">flex</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#等分布局"><span class="toc-nav-text">等分布局</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#float"><span class="toc-nav-text">float</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#table-2"><span class="toc-nav-text">table</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#fix"><span class="toc-nav-text">fix</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#等高需求"><span class="toc-nav-text">等高需求</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#table-3"><span class="toc-nav-text">table</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#flex-2"><span class="toc-nav-text">flex</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#float-1"><span class="toc-nav-text">float</span></a></li></ol></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'https://moxinn.com/2016/02/27/layout/';
+    var banner = 'undefined'
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+     // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+        
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+
+    // qrcode
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+
+    // gitment
+    var gitmentConfig = "moxinn";
+    if (gitmentConfig !== 'undefined') {
+      var gitment = new Gitment({
+        id: "多列布局方案整理",
+        owner: "moxinn",
+        repo: "yangmaoxin.github.io",
+        oauth: {
+          client_id: "0f87e490e00ee3fd87ef",
+          client_secret: "4a9d2b148e7971c2201ad12131ce8bf8159ccd2e"
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+
+    // valine
+    var valineConfig = "gG40u256e5d4nmqKAwbjlz9S-gzGzoHsz";
+    console.log('valineConfig',valineConfig);
+    if (valineConfig !== 'undefined') {
+      new Valine({
+        av: AV,
+        el: '#comments_valine',
+        appId: 'gG40u256e5d4nmqKAwbjlz9S-gzGzoHsz',
+        appKey: 'kQr7vEhzEzVFakiH2IkpTIzx',
+        placeholder: '说点什么吧',
+        notify: false,
+        verify: false,
+        avatar: 'mm',
+        meta: 'nick,mail'.split(','),
+        pageSize: '10',
+        path: window.location.pathname,
+        lang: 'zh-CN'.toLowerCase()
+    })
+    }
+
+
+
+
+  })();
+</script>
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Moxinn &copy; 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<script src="/js/script.js"></script>
+  </body>
+</html>
