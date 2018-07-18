@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://moxinn.com/"/>
-  <updated>2018-07-17T08:13:17.252Z</updated>
+  <updated>2018-07-18T09:31:23.106Z</updated>
   <id>https://moxinn.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://moxinn.com/2018/07/17/vscode-backup/"/>
     <id>https://moxinn.com/2018/07/17/vscode-backup/</id>
     <published>2018-07-17T03:01:39.000Z</published>
-    <updated>2018-07-17T08:13:17.252Z</updated>
+    <updated>2018-07-18T09:31:23.106Z</updated>
     
     <content type="html"><![CDATA[<p><blockquote class="blockquote-center">一个非常有用的 VSCode 插件Settings Sync，备份和同步 VSCode 的设置，操作系统和多端同步不用再折腾 VSCode 配置。</blockquote><br><a id="more"></a></p>
 <h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>在扩展商店中搜索并安装插件 <strong>setting sync</strong> </p>
@@ -81,7 +81,7 @@
     <link href="https://moxinn.com/2016/11/22/git/"/>
     <id>https://moxinn.com/2016/11/22/git/</id>
     <published>2016-11-22T00:15:54.000Z</published>
-    <updated>2018-07-17T08:13:17.252Z</updated>
+    <updated>2018-07-18T09:31:23.106Z</updated>
     
     <content type="html"><![CDATA[<p><blockquote class="blockquote-center">记录常用Git命令</blockquote><br><a id="more"></a></p>
 <h2 id="Git常用命令速查表"><a href="#Git常用命令速查表" class="headerlink" title="Git常用命令速查表"></a>Git常用命令速查表</h2><p><img src="http://photo.yangmaoxin.cn/git.png" alt="git"></p>
@@ -122,7 +122,7 @@
     <link href="https://moxinn.com/2016/09/01/automatic-backup/"/>
     <id>https://moxinn.com/2016/09/01/automatic-backup/</id>
     <published>2016-09-01T04:08:51.000Z</published>
-    <updated>2018-07-17T08:13:17.252Z</updated>
+    <updated>2018-07-18T09:31:23.106Z</updated>
     
     <content type="html"><![CDATA[<p><blockquote class="blockquote-center">此文记录自动备份Hexo博客源文件到Github，并且从Github恢复到新电脑的过程。</blockquote><br><a id="more"></a></p>
 <h1 id="自动备份Hexo博客源文件"><a href="#自动备份Hexo博客源文件" class="headerlink" title="自动备份Hexo博客源文件"></a>自动备份Hexo博客源文件</h1><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>通过通过监听Hexo的其它事件来完成自动执行Git命令完成自动备份。<br>通过查阅Hexo文档，找到了Hexo的主要事件，见下表：</p>
@@ -224,7 +224,7 @@
     <link href="https://moxinn.com/2016/08/31/hexo-coding-github/"/>
     <id>https://moxinn.com/2016/08/31/hexo-coding-github/</id>
     <published>2016-08-31T12:15:54.000Z</published>
-    <updated>2018-07-17T08:13:17.252Z</updated>
+    <updated>2018-07-18T09:31:23.106Z</updated>
     
     <content type="html"><![CDATA[<p><blockquote class="blockquote-center">因为Gitcafe已经被Coding收购，修改同时更新到Github以及Coding。</blockquote><br><a id="more"></a></p>
 <h2 id="设置Coding"><a href="#设置Coding" class="headerlink" title="设置Coding"></a>设置Coding</h2><p>在Coding上创建一个项目，项目名最好与注册时的账户用户名相同，这样比较方便。在之后使用Coding Pages可以通过 <code>{用户名}.coding.me</code> 形式的 URL 直接访问。</p>
@@ -276,7 +276,7 @@ touch Staticfile  #名字必须是Staticfile
     <link href="https://moxinn.com/2016/02/27/layout/"/>
     <id>https://moxinn.com/2016/02/27/layout/</id>
     <published>2016-02-27T04:53:40.000Z</published>
-    <updated>2018-07-17T08:13:17.252Z</updated>
+    <updated>2018-07-18T09:31:23.106Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>了解 CSS 中属性的值及其特性， 透彻分析问题和需求才可以选择和设计最适合的布局解决方案。</p>
@@ -333,7 +333,7 @@ touch Staticfile  #名字必须是Staticfile
     <link href="https://moxinn.com/2016/02/27/wynotes/"/>
     <id>https://moxinn.com/2016/02/27/wynotes/</id>
     <published>2016-02-27T04:43:18.000Z</published>
-    <updated>2018-07-17T08:13:17.252Z</updated>
+    <updated>2018-07-18T09:31:23.106Z</updated>
     
     <content type="html"><![CDATA[<h2 id="CSS-reset"><a href="#CSS-reset" class="headerlink" title="CSS reset"></a>CSS reset</h2><h3 id="placeholder-颜色重置"><a href="#placeholder-颜色重置" class="headerlink" title="placeholder 颜色重置"></a>placeholder 颜色重置</h3><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">:-moz-placeholder &#123; color:#ccc</span> !important; &#125;</div><div class="line"><span class="meta">::-moz-placeholder &#123; color:#ccc</span> !important; &#125;</div><div class="line"><span class="meta">:-ms-input-placeholder &#123; color:#ccc</span> !important; &#125;</div><div class="line"><span class="meta">:-webkit-input-placeholder &#123; color:#ccc</span> !important; &#125;</div></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -394,7 +394,7 @@ touch Staticfile  #名字必须是Staticfile
     <link href="https://moxinn.com/2016/01/26/hexo-github-gitcafe/"/>
     <id>https://moxinn.com/2016/01/26/hexo-github-gitcafe/</id>
     <published>2016-01-26T02:41:48.000Z</published>
-    <updated>2018-07-17T08:13:17.252Z</updated>
+    <updated>2018-07-18T09:31:23.106Z</updated>
     
     <content type="html"><![CDATA[<h2 id="尝试"><a href="#尝试" class="headerlink" title="尝试"></a>尝试</h2><p>作为一个长期处在高墙内的中国人，在把Hexo部署在Github Pages上后，要时刻考虑如果Github也被丧心病狂地墙掉后，作为一个常用中文的博客，不能被墙内访问，多么寂寞。所以，尝试找个墙内的备胎Gitcafe。Gitcafe 也提供 Pages 服务，也官方支持 Hexo，实在是一个尽职的备胎。<br><a id="more"></a></p>
 <h2 id="设置GitCafe"><a href="#设置GitCafe" class="headerlink" title="设置GitCafe"></a>设置GitCafe</h2><p>注册以后，创建一个项目，项目名需要与注册的用户名相同，默认分支选择gitcafe-pages,项目主页也是相同的。</p>
@@ -432,7 +432,7 @@ touch Staticfile  #名字必须是Staticfile
     <link href="https://moxinn.com/2016/01/25/hexo-my-blog/"/>
     <id>https://moxinn.com/2016/01/25/hexo-my-blog/</id>
     <published>2016-01-25T04:14:06.000Z</published>
-    <updated>2018-07-17T08:13:17.252Z</updated>
+    <updated>2018-07-18T09:31:23.106Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="什么是GitHub-Pages"><a href="#什么是GitHub-Pages" class="headerlink" title="什么是GitHub Pages"></a>什么是GitHub Pages</h3><p>本是用于介绍托管在 GitHub 的项目，现很流行用来搭建博客，有300M免费空间。</p>
 <h3 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo"></a>什么是Hexo</h3><blockquote>
@@ -521,7 +521,7 @@ touch Staticfile  #名字必须是Staticfile
     <link href="https://moxinn.com/2015/12/22/html/"/>
     <id>https://moxinn.com/2015/12/22/html/</id>
     <published>2015-12-22T02:04:56.000Z</published>
-    <updated>2018-07-17T08:13:17.252Z</updated>
+    <updated>2018-07-18T09:31:23.106Z</updated>
     
     <content type="html"><![CDATA[<h2 id="《网页制作》之HTML"><a href="#《网页制作》之HTML" class="headerlink" title="《网页制作》之HTML"></a>《网页制作》之HTML</h2><hr>
 <h3 id="HTML简介"><a href="#HTML简介" class="headerlink" title="HTML简介"></a>HTML简介</h3><p><strong>关于HTML的部分主要是熟悉标签的用法规则，明确标签语义化，避免以前滥用div标签的习惯。</strong><br>具体的课堂笔记可以在<a href="http://wiki.jikexueyuan.com/project/fend_note/" target="_blank" rel="external">前端开发笔记本</a>中查询到，以后多写写在课程中学到理解到的东西，而不仅仅只是把PPT的内容提炼出来，这样是不够的。</p>
@@ -561,7 +561,7 @@ touch Staticfile  #名字必须是Staticfile
     <link href="https://moxinn.com/2015/12/22/photoshop/"/>
     <id>https://moxinn.com/2015/12/22/photoshop/</id>
     <published>2015-12-22T02:01:46.000Z</published>
-    <updated>2018-07-17T08:13:17.252Z</updated>
+    <updated>2018-07-18T09:31:23.106Z</updated>
     
     <content type="html"><![CDATA[<h2 id="《网页制作》之Photoshop切图"><a href="#《网页制作》之Photoshop切图" class="headerlink" title="《网页制作》之Photoshop切图"></a>《网页制作》之Photoshop切图</h2><hr>
 <h3 id="工具、面板、视图"><a href="#工具、面板、视图" class="headerlink" title="工具、面板、视图"></a>工具、面板、视图</h3><h4 id="什么是切图"><a href="#什么是切图" class="headerlink" title="什么是切图"></a>什么是切图</h4><ol>
