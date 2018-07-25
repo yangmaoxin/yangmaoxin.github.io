@@ -39,8 +39,8 @@ tags: [效率,备份]
 
 ## 恢复备份
 
-1. 在需要同步的电脑打开VSCode,安装相同的插件
+1. 在需要同步的电脑打开VSCode,安装相同的插件。
 
 2. 按快捷键 shift+alt+d 或 ctrl+p 输入>sync点击Download Settings
 
-3. 把GITHUB GIST的gist id和内容粘贴然后回车
+3. 把GITHUB GIST的gist id和内容粘贴然后回车。
