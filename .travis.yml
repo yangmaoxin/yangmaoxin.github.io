@@ -45,4 +45,4 @@ branches:
 env:
  global:
    - GH_REF: github.com/yangmaoxin/yangmaoxin.github.io.git
-   - GITEE_REF: git@gitee.com:moxinn/blog.git
+   - GITEE_REF: gitee.com/moxinn/blog.git
