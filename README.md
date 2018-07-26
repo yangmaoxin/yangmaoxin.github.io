@@ -6,12 +6,12 @@
 
 部署状态 | 集成结果 | 参考值
 ---|---|---
-完成时间 | 2018-07-26 13:33:03 | yyyy-mm-dd hh:mm:ss
+完成时间 | 2018-07-26 13:39:10 | yyyy-mm-dd hh:mm:ss
 部署环境 | linux + stable | window \| linux + stable
 部署类型 | push | push \| pull_request \| api \| cron
 启用Sudo | false | false \| true
 仓库地址 | yangmaoxin/yangmaoxin.github.io | owner_name/repo_name
-提交分支 | 98bd63efc262b09639da860430ddcb87192aec40 | hash 16位
-提交信息 | 修改配置文件 |
-Job ID   | 408356574 |
-Job NUM  | 25.1 |
+提交分支 | 85643fc16837e9387eb6ab4d34f56c4bfc0422f1 | hash 16位
+提交信息 | 修改文章 |
+Job ID   | 408357846 |
+Job NUM  | 26.1 |
