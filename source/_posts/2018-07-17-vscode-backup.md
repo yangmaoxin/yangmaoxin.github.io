@@ -23,9 +23,9 @@ tags: [效率,备份]
 
 1. 快捷键 shift+alt+u 或 ctrl+p 输入>sync点击update/updload settings
 
-2. 把之前复制的access token粘贴后回车
+2. 把之前复制的access token粘贴后回车。
 
-3. 成功后跳出如下图，复制GITHUB GIST的内容，在需要同步的另一台电脑上使用
+3. 成功后跳出如下图，复制GITHUB GIST的内容，在需要同步的另一台电脑上使用。
 
 ## 获取gist id
 
