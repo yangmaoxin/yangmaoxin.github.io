@@ -11,7 +11,7 @@ cache:
 notifications:
   email:
     recipients:
-      - snippet@91h5.cc
+      - ymx0107@gmail.com
     on_success: never
     on_failure: always
 
