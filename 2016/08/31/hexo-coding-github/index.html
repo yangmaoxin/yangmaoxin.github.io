@@ -13,16 +13,18 @@
       把Hexo同时部署到GitHub和Coding | Moxinn&#39;s Blog
     
   </title>
-  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
-  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="/css/plugins/gitment.css">
-  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
-  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
-  <script src="/js/qrious.js"></script>
-<script src="/js/gitment.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    <script src="/js/qrious.js"></script>
+  
+  
   
   
     <!-- MathJax support START -->
@@ -44,18 +46,18 @@
         }
       });
     </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- MathJax support END -->
   
 
 
   
-	<div class="hide"> 
-    <script type="text/javascript">
-    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1262387845'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1262387845' type='text/javascript'%3E%3C/script%3E"));</script>
-		</script>
-	</div>
-
+    <div class="hide"> 
+      <script type="text/javascript">
+      var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1262387845'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1262387845' type='text/javascript'%3E%3C/script%3E"));</script>
+      </script>
+    </div>
+  
 </head>
 <div class="wechat-share">
   <img src="/css/images/logo.png" />
@@ -284,7 +286,7 @@ touch Staticfile  #名字必须是Staticfile
     }
     $('.header').removeClass('fixed-header')
 
-     // error image
+    // error image
     $(".markdown-content img").on('error', function() {
       $(this).attr('src', 'http://file.muyutech.com/error-img.png')
       $(this).css({
@@ -298,7 +300,7 @@ touch Staticfile  #名字必须是Staticfile
       if (src !== 'http://file.muyutech.com/error-img.png') {
         var imageW = $(this).width()
         var imageH = $(this).height()
-        
+
         var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
         zoom = zoom < 1 ? 1 : zoom
         zoom = zoom > 2 ? 2 : zoom
@@ -318,43 +320,28 @@ touch Staticfile  #名字必须是Staticfile
         })
       }
     })
+  })();
+</script>
 
-    // qrcode
+
+  <script>
     var qr = new QRious({
       element: document.getElementById('share-qrcode'),
       value: document.location.href
     });
+  </script>
 
-    // gitment
-    var gitmentConfig = "moxinn";
-    if (gitmentConfig !== 'undefined') {
-      var gitment = new Gitment({
-        id: "把Hexo同时部署到GitHub和Coding",
-        owner: "moxinn",
-        repo: "yangmaoxin.github.io",
-        oauth: {
-          client_id: "0f87e490e00ee3fd87ef",
-          client_secret: "4a9d2b148e7971c2201ad12131ce8bf8159ccd2e"
-        },
-        theme: {
-          render(state, instance) {
-            const container = document.createElement('div')
-            container.lang = "en-US"
-            container.className = 'gitment-container gitment-root-container'
-            container.appendChild(instance.renderHeader(state, instance))
-            container.appendChild(instance.renderEditor(state, instance))
-            container.appendChild(instance.renderComments(state, instance))
-            container.appendChild(instance.renderFooter(state, instance))
-            return container;
-          }
-        }
-      })
-      gitment.render(document.getElementById('comments'))
-    }
 
+
+
+
+
+
+
+
+  <script>
     // valine
     var valineConfig = "gG40u256e5d4nmqKAwbjlz9S-gzGzoHsz";
-    console.log('valineConfig',valineConfig);
     if (valineConfig !== 'undefined') {
       new Valine({
         av: AV,
@@ -371,49 +358,47 @@ touch Staticfile  #名字必须是Staticfile
         lang: 'zh-CN'.toLowerCase()
     })
     }
-
-
-
-
-  })();
-</script>
+  </script>
 
     <div class="scroll-top">
   <span class="arrow-icon"></span>
 </div>
     <footer class="app-footer">
-    <div class="top">
-        
-<p>
-    <span id="busuanzi_container_site_uv" style='display:none'>
-        站点总访客数：<span id="busuanzi_value_site_uv"></span>
-    </span>
-    <span id="busuanzi_container_site_pv" style='display:none'>
-        站点总访问量：<span id="busuanzi_value_site_pv"></span>
-    </span>
-</p>
+  <div class="top">
+      <p>
+          
+              <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+          
+          <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+      </p>
+  </div>
+  <div class="bottom">
+      <p><span>Moxinn &copy; 2019</span>
+          <span>
+              
+              Power by <a href="http://hexo.io/" target="_blank">Hexo</a>
+          </span>
+      </p>
+  </div>
+  
+<div class="busuanzi-count">
+      <span class="site-uv">
+        <i class="fa fa-user"></i> 访问人数
+        <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      </span>
+      <span class="site-pv">
+        <i class="fa fa-eye"></i> 访问总量
+        <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+        次
+      </span>
+  </div>
 
 
-        <p>
-            
-                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
-            
-            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
-        </p>
-    </div>
-    <div class="bottom">
-        <p><span>Moxinn &copy; 2018</span>
-            <span>
-                
-                Power by <a href="http://hexo.io/" target="_blank">Hexo</a>
-            </span>
-        </p>
-    </div>
 </footer>
 
 
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
 
 <script>
   function async(u, c) {
@@ -426,14 +411,14 @@ touch Staticfile  #名字必须是Staticfile
   }
 </script>
 <script>
-  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
     FastClick.attach(document.body);
   })
 </script>
 
 <script>
   var hasLine = 'true';
-  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
     $('figure pre').each(function(i, block) {
       var figure = $(this).parents('figure');
       if (hasLine === 'false') {
@@ -450,6 +435,8 @@ touch Staticfile  #名字必须是Staticfile
     });
   })
 </script>
+<!-- Baidu Tongji -->
+
 <script src="/js/script.js"></script>
   </body>
 </html>

@@ -485,6 +485,23 @@ h2.article-head {
   color: #7f8c8d;
   line-height: 1.5;
 }
+.site-uv,
+.site-pv,
+.page-pv {
+  display: inline-block;
+}
+.site-uv .busuanzi-value,
+.site-pv .busuanzi-value,
+.page-pv .busuanzi-value {
+  margin: 0 5px;
+}
+.site-uv {
+  margin-right: 10px;
+}
+.site-uv::after {
+  content: "|";
+  padding-left: 10px;
+}
 .guide-pager {
   margin: 1em 3em;
   display: flex;
@@ -853,6 +870,9 @@ h2.article-head {
 }
 .author .share-icons .icon-github {
   color: #333;
+}
+.author .share-icons .icon-linkedin {
+  color: #0077b5;
 }
 .author .share-icons .icon-zhihu {
   color: #0767c8;
