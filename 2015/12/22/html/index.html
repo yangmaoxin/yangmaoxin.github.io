@@ -15,7 +15,7 @@
   </title>
   <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
-  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
   
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -160,7 +160,7 @@
 <h3 id="HTML简介"><a href="#HTML简介" class="headerlink" title="HTML简介"></a>HTML简介</h3><p><strong>关于HTML的部分主要是熟悉标签的用法规则，明确标签语义化，避免以前滥用div标签的习惯。</strong><br>具体的课堂笔记可以在<a href="http://wiki.jikexueyuan.com/project/fend_note/" target="_blank" rel="external">前端开发笔记本</a>中查询到，以后多写写在课程中学到理解到的东西，而不仅仅只是把PPT的内容提炼出来，这样是不够的。</p>
 <a id="more"></a>
 <p><img src="http://wiki.jikexueyuan.com/project/fend_note/images/H/html-overview.png" alt="此处输入图片的描述"></p>
-<h3 id="HTML标签语义化："><a href="#HTML标签语义化：" class="headerlink" title="HTML标签语义化："></a>HTML标签语义化：</h3><p>标签的用途：语义化，让网页更好的被搜索引擎理解。</p>
+<h3 id="HTML标签语义化："><a href="#HTML标签语义化：" class="headerlink" title="HTML标签语义化："></a>HTML标签语义化：</h3><p>标签的用途：语义化，让网页更好的被搜索引擎理解</p>
 <p>什么叫做语义化呢，说的通俗点就是：明白每个标签的用途（在什么情况下使用此标签合理）比如，网页上的文章的标题就可以用标题标签，网页上的各个栏目的栏目名称也可以使用标题标签。文章中内容的段落就得放在段落标签中，在文章中有想强调的文本，就可以使用 em 标签表示强调等等。</p>
 <h3 id="语义化可以给我们带来什么样的好处呢？"><a href="#语义化可以给我们带来什么样的好处呢？" class="headerlink" title="语义化可以给我们带来什么样的好处呢？"></a>语义化可以给我们带来什么样的好处呢？</h3><ul>
 <li>更容易被搜索引擎收录(SEO)。</li>
@@ -408,6 +408,7 @@
   async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
     $('figure pre').each(function(i, block) {
       var figure = $(this).parents('figure');
+      var table = figure.find('table');
       if (hasLine === 'false') {
         figure.find('.gutter').hide();
       }
@@ -418,6 +419,9 @@
       codeTag.innerHTML = codeHtml;
       $(this).attr('class', '').empty().html(codeTag);
       figure.attr('data-lang', lang.toUpperCase());
+      table.attr('data-lang', lang.toUpperCase());
+
+
       hljs.highlightBlock(block);
     });
   })

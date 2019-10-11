@@ -524,7 +524,7 @@ h2.article-head {
 .article-summary pre,
 .markdown-content code,
 .article-summary code {
-  font-family: 'Roboto Mono', Monaco, courier, monospace;
+  font-family: Consolas, Monaco, Menlo, Consolas, monospace;
   font-size: 13px;
 }
 @media screen and (max-width: 480px) {
@@ -548,8 +548,8 @@ h2.article-head {
 }
 .markdown-content p code,
 .article-summary p code {
-  background-color: #f8f8f8;
-  color: #e96900;
+  background-color: #f8f5ec;
+  color: #d63200;
   padding: 3px 5px;
   margin: 0 2px;
   border-radius: 2px;
@@ -619,26 +619,47 @@ h2.article-head {
 }
 .markdown-content figure,
 .article-summary figure {
-  background: #f8f8f8;
-  padding: 0 10px;
-  border-radius: 2px;
+  background: #f8f5ec;
+  border-radius: 5px;
   margin: 20px 0;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
   overflow: auto;
   position: relative;
 }
-.markdown-content figure:after,
-.article-summary figure:after {
+.markdown-content figure table,
+.article-summary figure table {
+  width: 100%;
+  position: relative;
+}
+.markdown-content figure table:after,
+.article-summary figure table:after {
   content: attr(data-lang);
   position: absolute;
   top: 0;
   right: 0;
-  color: #ccc;
-  text-align: right;
+  left: 0;
+  text-align: left;
   font-size: 0.7em;
-  padding: 5px 10px 0;
-  line-height: 15px;
-  height: 15px;
-  font-weight: 500;
+  font-weight: bold;
+  padding: 2px 7px;
+  color: #b1b1b1;
+  background: #f4efe1;
+}
+.markdown-content .code pre,
+.article-summary .code pre {
+  margin: 0;
+  padding: 30px 4px 10px;
+}
+.markdown-content .gutter,
+.article-summary .gutter {
+  width: 10px;
+  color: #cacaca;
+}
+.markdown-content .gutter pre,
+.article-summary .gutter pre {
+  color: #cacaca;
+  margin: 0;
+  padding: 30px 6px 10px;
 }
 .markdown-content > table,
 .article-summary > table {
