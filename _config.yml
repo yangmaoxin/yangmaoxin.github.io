@@ -102,4 +102,4 @@ deploy:
   message: ""
   repo: 
     github: git@github.com:yangmaoxin/yangmaoxin.github.io.git,master
-#  coding: git@git.coding.net:iymx/iymx.git,master
+    # coding: git@git.coding.net:iymx/iymx.git,master
