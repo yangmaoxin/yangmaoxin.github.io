@@ -14,7 +14,7 @@ menu:
 
 # highlight
 highlight:
-  tomorrow
+  solarized-light
 
 # catalog
 catalog: true

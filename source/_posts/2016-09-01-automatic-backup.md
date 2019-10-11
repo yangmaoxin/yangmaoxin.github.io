@@ -26,29 +26,29 @@ tags: [hexo]
 
 将Hexo目录加入Git仓库
 1. 在Github下创建一个新的repository，取名为HEXO。(与本地的Hexo源码文件夹同名即可)进入本地的Hexo文件夹，执行以下命令创建仓库:
-```
+```Bash
 git init
 ```
 1. 设置远程仓库地址，并更新:
-```
+```Bash
 git remote add origin git@github.com:XXX/XXX.git git pull origin
 master
 ```
 1. 修改`.gitignore`文件（如果没有请手动创建一个），在里面加入`*.log` 和 `public/` 以及.`deploy*/`。因为每次执行`hexo generate`命令时，上述目录都会被重写更新。因此忽略这两个目录下的文件更新，加快push速度。
 2. 执行命令以下命令，完成Hexo源码在本地的提交:
-```
+```Bash
 git add .
 git commit -m "添加hexo源码文件作为备份"
 ```
 1. 执行以下命令，将本地的仓库文件推送到Github:
-```
+```Bash
 git push origin master
 ```
 ### 安装shelljs模块
 要实现这个自动备份功能，需要依赖`Node.js`的一个`shelljs`模块,该模块重新包装了child_process,调用系统命令更加的方便。该模块需要安装后使用。
 
 在命令中键入以下命令，完成shelljs模块的安装：
-```
+```Bash
 npm install --save shelljs
 ```
 ### 编写自动备份脚本
@@ -58,7 +58,7 @@ npm install --save shelljs
 ps: 如果没有scripts目录，请新建一个。
 
 然后在脚本中，写入以下内容：
-```
+```Bash
 require('shelljs/global');
 
 try {
@@ -132,12 +132,12 @@ To git@github.com:smilexiamo/hexo.git
 切换电脑以后，在新电脑上安装node、git环境，配置github sshkey
 
 创建空目录作为hexo工作目录，从远程仓库中clone出之前备份的repo
-```
+```Bash
 git clone git@github.com:xxx/geeknote.git
 ```
 
 git clone成功后，本地出现geeknote文件夹，开始安装hexo环境
-```
+```Bash
 cd geeknote
 npm install hexo
 npm install
@@ -146,7 +146,7 @@ npm install --save shelljs
 ```
 
 之后执行
-```
+```Bash
 hexo g
 hexo server
 ```
