@@ -1,7 +1,7 @@
 {
   "name": "hexo-theme-vexo",
   "version": "1.4.0",
-  "description": "",
+  "description": "Vexo is a Hexo theme inspired by Vue's official website.",
   "scripts": {
     "setup": "npm cache clean && npm install",
     "lint": "bash lint.sh"
