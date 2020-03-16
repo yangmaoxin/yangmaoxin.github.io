@@ -3,11 +3,9 @@
 
 
     
-    
-    
   <url>
     <loc>https://moxinn.com/2015/12/22/html/</loc>
-    <lastmod>2019-10-11T08:18:18.500Z</lastmod>
+    <lastmod>2020-03-16T02:45:56.803Z</lastmod>
     <data>
         <display>
         <title>HTML笔记</title>
@@ -27,7 +25,7 @@
     
   <url>
     <loc>https://moxinn.com/2015/12/22/photoshop/</loc>
-    <lastmod>2019-10-11T08:18:18.500Z</lastmod>
+    <lastmod>2020-03-16T02:45:56.803Z</lastmod>
     <data>
         <display>
         <title>Photoshop切图</title>
@@ -47,7 +45,7 @@
     
   <url>
     <loc>https://moxinn.com/2016/01/25/hexo-my-blog/</loc>
-    <lastmod>2019-10-11T08:18:18.500Z</lastmod>
+    <lastmod>2020-03-16T02:45:56.803Z</lastmod>
     <data>
         <display>
         <title>Hexo+Github，搭建属于自己的博客</title>
@@ -67,7 +65,7 @@
     
   <url>
     <loc>https://moxinn.com/2016/01/26/hexo-github-gitcafe/</loc>
-    <lastmod>2019-10-11T08:18:18.500Z</lastmod>
+    <lastmod>2020-03-16T02:45:56.803Z</lastmod>
     <data>
         <display>
         <title>把Hexo同时部署到GitHub和GitCafe</title>
@@ -87,7 +85,7 @@
     
   <url>
     <loc>https://moxinn.com/2016/02/27/layout/</loc>
-    <lastmod>2019-10-11T08:18:18.500Z</lastmod>
+    <lastmod>2020-03-16T02:45:56.803Z</lastmod>
     <data>
         <display>
         <title>多列布局方案整理</title>
@@ -107,7 +105,7 @@
     
   <url>
     <loc>https://moxinn.com/2016/02/27/wynotes/</loc>
-    <lastmod>2019-10-11T08:18:18.500Z</lastmod>
+    <lastmod>2020-03-16T02:45:56.803Z</lastmod>
     <data>
         <display>
         <title>网易前端微专业------页面架构笔记</title>
@@ -127,7 +125,7 @@
     
   <url>
     <loc>https://moxinn.com/2016/08/31/hexo-coding-github/</loc>
-    <lastmod>2019-10-11T08:18:18.500Z</lastmod>
+    <lastmod>2020-03-16T02:45:56.803Z</lastmod>
     <data>
         <display>
         <title>把Hexo同时部署到GitHub和Coding</title>
@@ -147,7 +145,7 @@
     
   <url>
     <loc>https://moxinn.com/2016/09/01/automatic-backup/</loc>
-    <lastmod>2019-10-11T08:18:18.500Z</lastmod>
+    <lastmod>2020-03-16T02:45:56.803Z</lastmod>
     <data>
         <display>
         <title>自动备份与恢复Hexo博客源文件</title>
@@ -167,7 +165,7 @@
     
   <url>
     <loc>https://moxinn.com/2016/11/22/git/</loc>
-    <lastmod>2019-10-11T08:18:18.500Z</lastmod>
+    <lastmod>2020-03-16T02:45:56.803Z</lastmod>
     <data>
         <display>
         <title>Git命令速查表－好记性不如一张表</title>
@@ -187,7 +185,7 @@
     
   <url>
     <loc>https://moxinn.com/2018/07/17/vscode-backup/</loc>
-    <lastmod>2019-10-11T08:18:18.500Z</lastmod>
+    <lastmod>2020-03-16T02:45:56.803Z</lastmod>
     <data>
         <display>
         <title>VSCode 配置备份与同步</title>
@@ -206,6 +204,8 @@
     </data>
     </url>
 
+    
+    
     
     
     
