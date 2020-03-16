@@ -22,6 +22,7 @@
     "hexo-renderer-stylus": "^0.3.0",
     "hexo-server": "^0.1.3",
     "hexo-symbols-count-time": "^0.6.1",
+    "hexo-tag-echarts3": "^1.1.2",
     "hexo-wordcount": "^1.2.3",
     "shelljs": "^0.5.3"
   }
