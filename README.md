@@ -6,12 +6,12 @@
 
 部署状态 | 集成结果 | 参考值
 ---|---|---
-完成时间 | 2020-03-16 10:46:24 | yyyy-mm-dd hh:mm:ss
+完成时间 | 2020-03-16 11:15:59 | yyyy-mm-dd hh:mm:ss
 部署环境 | linux + stable | window \| linux + stable
 部署类型 | push | push \| pull_request \| api \| cron
 启用Sudo | true | false \| true
 仓库地址 | yangmaoxin/yangmaoxin.github.io | owner_name/repo_name
-提交分支 | 32df6968505fb5ac618ca17d48b85b07f16503a7 | hash 16位
+提交分支 | ab87ea8831f63b27a9359eabe1a819c26fa85a32 | hash 16位
 提交信息 | add |
-Job ID   | 662891836 |
-Job NUM  | 33.1 |
+Job ID   | 662896382 |
+Job NUM  | 34.1 |
